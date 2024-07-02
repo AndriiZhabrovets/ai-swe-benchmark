@@ -1,1 +1,1 @@
-# ai-swe-benchmark
+# Artificial Intelligence Benchmark
