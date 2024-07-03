@@ -1,12 +1,4 @@
 # Artificial Intelligence Benchmark
-- [[#General Idea|General Idea]]
-- [[#Benchmarks & their Types|Benchmarks & their Types]]
-- [[#Benchmark Subjects|Benchmark Subjects]]
-- [[#Technologies Used|Technologies Used]]
-		- [[#The Paper|The Paper]]
-		- [[#Benchmarks|Benchmarks]]
-- [[#Deadlines and Time Management|Deadlines and Time Management]]
-- [[#Possible difficulties|Possible difficulties]]
 
 ## General Idea
 
