@@ -1,4 +1,4 @@
-# Artificial Intelligence Benchmark
+# Artificial Intelligence Benchmarks
 
 ## General Idea
 
