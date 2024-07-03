@@ -18,7 +18,7 @@ The decision of which categories will be used was based on the types of tasks an
 
 ## Benchmark Subjects 
 
-Below is a table with the latest information on the most popular AI models for which have APIs.  
+Below is a table with the latest information on the most popular AI models which have APIs.  
 
 | **AI Model**        | **Company** | **Tiers**                                                                                           | **Pricing**                                                                                                                                                                                                                                                                                                                     | **Languages**            | **Last Updated** | **API/Local** | **Free Tier**                            | **Link**                                |
 | ------------------- | ----------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ---------------- | ------------- | ---------------------------------------- | --------------------------------------- |
