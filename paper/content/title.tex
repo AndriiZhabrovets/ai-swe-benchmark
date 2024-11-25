@@ -1,0 +1,50 @@
+\begin{titlepage}
+    % First we create an empty page
+    \clearpage\thispagestyle{empty}
+    \setstretch{1}
+
+    % So here we are creating a kind of a header section (align to the top of the page ) which consists of two another sections which both take 50% (0,5) of the mother section: 
+    \begin{minipage}[t]{\textwidth}
+        \begin{minipage}[t]{0.5\textwidth}
+            Andrii Zhabrovets\\
+            Salmsacherstrasse 11A\\
+            8590 Romanshorn\\
+            076 525 13 74\\
+            anzhabro@ksr.ch
+        \end{minipage}
+        \begin{minipage}[t]{0.5\textwidth}
+            \begin{flushright}
+                Kantonsschule Romanshorn\\
+                Class 4Mez\\
+                Matura 
+            \end{flushright}
+        \end{minipage}
+    \end{minipage}
+
+    % Now we make some vertical space
+    \vspace{4cm}
+
+
+    % We separate the next part of the code so that the title formatting applies only to the selected section
+    {
+    % Center our title in the middle
+    \centering
+
+    % Add title (huge size, bold) and \par is just to start new paragraph
+    \Huge\bfseries Artificial Intelligence as a Substitute for Software Engineers: A Benchmark-Based Analysis\par
+
+    \vspace{1cm}
+
+    \includegraphics[width=0.35\textwidth]{attachments/ai-title.png}\par
+    }
+
+    % Now let's add a footer.
+    \vspace{46mm}
+
+    % No indent is similar to strip() in python
+    \noindent
+    Subject: Informatik\noindent \\ 
+    Supervisor: Tom Hofmann  \\
+    Deadline: 13 January 2024 \\
+
+\end{titlepage}
