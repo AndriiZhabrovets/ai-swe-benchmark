@@ -13,11 +13,11 @@ The main idea of this project is to asses the current capabilities of various po
 ### Technology Used
 
 #### The Paper
-    
+
 The Paper is planned to be written in LaTeX, due to its convenience and the freedom of customisation. Other alternatives (Microsoft Word, Google Docs, etc.) can be chosen if the teacher requires to do so.
 
 #### Benchmarks 
-    
+
 The programming language chosen for this project is python. The main reason for this is the fact that based on the table most models have APIs for either Python or Javascript.   
 
 ## Benchmark Subjects 
