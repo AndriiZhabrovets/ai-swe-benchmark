@@ -3,18 +3,66 @@
 
 \subsection{Description of the Benchmark Framework}
 
+Why Leetcode was chosen as a representative platform for programming tasks.
+
+Explanation of the benchmark framework's design to ensure fairness and consistency.
+
+Steps to automate problem feeding and solution evaluation for AI models.
+
 \subsubsection{Selection and Categorization of Programming Problems}
 
-Die Entwicklung der Augmented-Reality-Technologie geht auf die 1960er Jahre zurück, als der Informatiker Ivan Sutherland das erste kopfgetragene Display erfand. Dieses bahnbrechende Gerät, das auch als “Sword of Damocles” bezeichnet wurde, ebnete den Weg für tragbare Computerschnittstellen, obwohl es keine echten AR-Funktionen bot \cite{Sutherland1968AHT}. Nicht lange danach, 1975, gründete Myron Krueger den Videoplace, ein Labor für künstliche Realität. Dieser Raum reagierte auf die Bewegungen und Aktionen der Benutzer und machte Brillen oder Handschuhe überflüssig \cite{Videoplace}.
+Criteria for selecting programming problems (e.g., diversity in difficulty levels: easy, medium, hard).
+
+Examples of specific problem categories and why they were chosen.
+
+
+
+The selection and categorization of programming problems is a foundational step in designing an effective benchmarking framework. For this study, the problems were chosen to represent a diverse and balanced set of challenges, ensuring that the evaluation captures the full spectrum of skills required in software development.
+
+The selection process prioritized problems that reflect common themes in programming, such as algorithms, data structures, and computational logic. These categories were chosen because they are fundamental to both academic and practical software engineering tasks. Problems that demand optimization, reasoning, and debugging skills were included to test the AI's ability to handle both routine and advanced challenges. Care was also taken to include problems of varying complexity, categorized as easy, medium, and hard, to evaluate the models’ performance across different levels of difficulty.
+
+Easy problems typically involve straightforward implementations, such as basic arithmetic operations or simple control structures, designed to test whether the AI can understand and respond to basic instructions accurately. Medium-level problems often introduce more complex requirements, such as recursion, intermediate data structures (e.g., linked lists or trees), or algorithmic optimizations. Hard problems, on the other hand, often require deep problem-solving skills, including advanced algorithms (e.g., dynamic programming or graph theory), intricate logic, and creative approaches to meet strict efficiency constraints.
+
+To ensure a representative dataset, problems were selected from Leetcode, a widely recognized platform for programming challenges. This source was chosen for its well-structured problem descriptions, comprehensive test cases, and relevance to real-world coding scenarios. Problems with clear success criteria were prioritized to simplify the evaluation process and ensure that AI outputs could be objectively assessed.
+
+Categorizing the problems by type and difficulty also helps identify the specific strengths and weaknesses of the AI models. For example, analyzing the performance across problem types can reveal whether a model excels in certain areas, such as mathematical computations, but struggles with others, such as handling edge cases in dynamic programming problems. This structured approach to selection and categorization ensures a comprehensive and meaningful assessment of AI capabilities in solving programming tasks.
 
 \subsubsection{Characteristics of the Problem Set}
 
-Tatsächlich wurde der Begriff “Augmented Reality” erst 1990 von Thomas P. Caudell, einem ehemaligen Forscher bei Boeing, eingeführt \cite{Lee2012AugmentedRI}. Im Jahr 1992 stellte Louis Rosenburg vom Armstrong Research Lab der United States Air Force “Virtual Fixtures” vor, eines der ersten voll funktionsfähigen Augmented-Reality-Systeme \cite{rosenberg1992use}.
+Statistical overview of the problem set (e.g., number of problems, distribution by difficulty).
+
+Importance of including real-world-relevant challenges in the dataset.
+
+Avoiding bias by ensuring the problem set covers a wide range of skills (e.g., coding logic, optimization, error handling).
 
 \subsection{Overview of AI Models Evaluated}
 
-Weitere Entwicklungen in den späten 90er Jahren waren die Definition des Realitäts-Virtualitäts-Kontinuums von Paul Milgram und Fumio Kishino im Jahr 1994, das sich von der realen Umgebung zur virtuellen Umgebung erstreckt. Augmented Reality (AR) und Virtual Reality (VR) liegen dazwischen, wobei sich AR zur realen Welt und VR zur virtuellen Welt neigt  \cite{Milgram94a}. Ronald Azumas Studie von 1997 über AR ist ein weiterer wichtiger Meilenstein, der eine allgemein akzeptierte Definition der Technologie liefert. Azuma definierte AR als die Integration von realen und virtuellen Umgebungen mit 3D-Registrierung und Echtzeit-Interaktivität \cite{Azuma1997ASO}. Im Jahr 2000 brachte Hirokazu Kato das AR ToolKit auf den Markt, eine Open-Source-Softwarebibliothek, die die Entwicklung von AR-Softwareanwendungen durch eine Video-Tracking-Technologie revolutionierte, die virtuelle Grafiken über die physische Welt legt \cite{ARTooLKIT}.
+Brief introduction to the AI models tested (e.g., GPT models, Gemini, or other programming-specific models, Claude).
+
+Key capabilities of each model (e.g., natural language understanding, multi-step reasoning).
+
+Why these models were chosen and their relevance to programming tasks.
 
 \subsection{Evaluation Metrics and Criteria}
 
-In den frühen 2010er Jahren begannen grosse Technologieunternehmen in die AR-Branche einzusteigen. So stellte Google 2012 seine Google Glass vor, eine Augmented-Reality-Brille, die den Nutzern immersive Erfahrungen bietet \cite{Google_for_Developer_2012}. Im Jahr 2015 kündigte Microsoft Windows Holographic und das HoloLens-Headset für Augmented Reality an. Das Headset verschmolz hochauflösende “Hologramme” mit der physischen Welt \cite{Tech_Discussion_2015}. Im Jahr 2016 wurde die Technologie leichter zugänglich, als Niantic Pokémon Go für iOS und Android veröffentlichte. Die mobile AR-App erfreute sich grosser Beliebtheit und steigerte die Attraktivität von AR-Spielen \cite{Bond_2016}. Darüber hinaus hatte der Aufstieg mobiler AR-Apps einen bemerkenswerten Einfluss auf andere Branchen wie den Einzelhandel. Im Jahr 2017 brachte IKEA seine Augmented-Reality-App IKEA Place auf den Markt, die es den Nutzern ermöglicht, sich vor dem Kauf von Möbeln zu Hause eine Vorschau anzusehen \cite{IKEA_2017}. Im Jahr 2023 schliesslich kündigte Apple das Apple Vision Pro an, ein Augmented-Reality-Headset, das die reale und die digitale Welt “nahtlos” miteinander verschmelzen lässt und den neuesten Fortschritt in der AR-Technologie markiert \cite{Apple}.
+Metrics used to measure AI performance, such as:
+
+    Correctness (did the solution work?).
+
+    Efficiency (e.g., runtime complexity or memory usage).
+
+    Clarity (how well-structured the solution is).
+
+
+
+Evaluating the performance of AI models in solving programming problems requires a clear and rigorous set of metrics to ensure consistency and objectivity. The chosen metrics in this study are designed to assess the correctness, efficiency, and overall quality of solutions produced by AI models, reflecting their applicability to real-world programming tasks.
+    
+The primary criterion for evaluation is **correctness**, which measures whether the solution provided by the AI satisfies the problem’s requirements. This involves running the AI-generated code against a suite of test cases, including edge cases, and determining if all outputs are as expected. Correctness serves as the most fundamental benchmark, as a solution that fails test cases cannot be considered reliable or functional.
+    
+In addition to correctness, efficiency is a critical metric. It assesses the performance of the AI’s solutions in terms of runtime complexity and resource utilization. Problems involving large inputs or computationally intensive operations are particularly valuable in highlighting whether the AI can generate solutions that meet the expected efficiency constraints, such as adhering to optimal time and space complexity.
+    
+The **readability and structure** of the code are also important factors in the evaluation. While not strictly necessary for functional correctness, well-structured and readable code is essential for maintainability and collaboration in professional software development. This criterion examines whether the AI produces solutions that follow standard programming practices, such as proper variable naming, modular design, and clear logical flow.
+    
+To provide a comprehensive assessment, the study also incorporates metrics for **problem-solving completeness**. This involves evaluating whether the AI model effectively interprets the problem statement and generates a fully implemented solution, as opposed to incomplete or partially functional outputs. Failure to address all aspects of the problem, even if some test cases pass, is considered a limitation of the model.
+    
+Finally, consistency is monitored across multiple problem-solving attempts to evaluate the reliability of the models. This ensures that results are not anomalous and that the AI performs consistently across diverse tasks and repeated runs. By combining these metrics, the evaluation framework provides a holistic picture of the AI’s capabilities, strengths, and limitations in solving programming problems.
