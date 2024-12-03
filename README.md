@@ -15,6 +15,12 @@ The decision on which categories to use was based on the types of tasks that an 
 - External framework/library usage - forces AI models to use an external library. Observes how well the library's capabilities are used and whether they are used correctly.
 - Programming from scratch - tests the ability of AI models to create a simple program given a precise description of how it should work. Rather difficult to benchmark. More research is needed.
 
+
+## New Idea: AI Evaluation of the result 
+
+Maybe I can implement the usage of AI for evaluation of the results (second layer check):
+https://langchain-ai.github.io/langgraph/tutorials/usaco/usaco/
+
 ## Benchmark Subjects 
 
 Below is a table with the latest information on the most popular AI models that have APIs.
@@ -28,6 +34,8 @@ Below is a table with the latest information on the most popular AI models that 
 | **Mistral**         | Mistral AI  | Mistral 7B,<br>Mixtral 8x7B,<br>Mixtral 8x22B,<br>Mistral Small,<br>Mistral Large,<br>Mistral Embed | Pricing not publicly disclosed                                                                                                                                                                                                                                                                                                  | Python, JavaScript, more | Feb 2024         | API           | Yes                                      | https://docs.mistral.ai/api/            |
 | **Cohere**          | Cohere      | Command R,<br>Command X,<br>Command XL                                                              | $0.01 - $0.06 / 1k tokens                                                                                                                                                                                                                                                                                                       | PythPython, JavaScript   | July 2024        | API           | Yes                                      | https://cohere.com/command              |
 
+
+After a careful consideration I've made a decision to stick to only the models from OpenAI, Google and Anthropic.
 ## Technologies Used
 
 #### The Paper
