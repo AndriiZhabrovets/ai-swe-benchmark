@@ -19,7 +19,10 @@ The decision on which categories to use was based on the types of tasks that an 
 ## New Idea: AI Evaluation of the result 
 
 Maybe I can implement the usage of AI for evaluation of the results (second layer check):
+
 https://langchain-ai.github.io/langgraph/tutorials/usaco/usaco/
+
+For the implementation of this idea the usage of langchain-ai module is necessary: https://langchain-ai.github.io/langgraph/tutorials/introduction/
 
 ## Benchmark Subjects 
 
