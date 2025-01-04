@@ -1,4 +1,6 @@
-def longestCommonPrefix(self, v: List[str]) -> str:
+from typing import List
+
+def longestCommonPrefix(v: List[str]) -> str:
         ans=""
         v=sorted(v)
         first=v[0]

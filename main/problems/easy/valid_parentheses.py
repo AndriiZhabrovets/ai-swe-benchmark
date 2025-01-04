@@ -1,4 +1,4 @@
-def isValid(self, s: str) -> bool:
+def isValid(s: str) -> bool:
     stack = []
     mapping = {")":"(", "}":"{", "]":"["}
 

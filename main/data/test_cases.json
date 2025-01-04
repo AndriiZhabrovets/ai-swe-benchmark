@@ -1,0 +1,348 @@
+{
+    "two_sum": [
+      {
+        "input": [[2, 7, 11, 15], 9],
+        "expected_output": [[0, 1], [1, 0]]
+      },
+      {
+        "input": [[3, 2, 4], 6],
+        "expected_output": [[1, 2], [2, 1]]
+      },
+      {
+        "input": [[3, 3], 6],
+        "expected_output": [[0, 1], [1, 0]]
+      },
+        {
+            "input": [[-1, -2, -3, -4, -5], -8],
+            "expected_output": [[2, 4], [4, 2]]
+        },
+        {
+            "input": [[9, 0, 4, 11, 3], 20],
+            "expected_output": [[0, 3], [3, 0]]
+
+        }
+    ],
+
+    "roman_to_int": [
+      {
+        "input": ["III"],
+        "expected_output": [3]
+      },
+      {
+        "input": ["LVIII"],
+        "expected_output": [58]
+      },
+        {
+            "input": ["MCMXCIV"],
+            "expected_output": [1994]
+        },
+        {
+            "input": ["XVII"],
+            "expected_output": [17]
+        },
+        {
+            "input": ["XXVI"],
+            "expected_output": [26]
+        }
+
+    ],
+
+    "longest_common_prefix": [
+        {
+            "input": [["flower", "flow", "flight"]],
+            "expected_output": ["fl"]
+        },
+        {
+            "input": [["dog", "racecar", "car"]],
+            "expected_output": [""]
+        },
+            {
+                "input": [["apple", "app", "april"]],
+                "expected_output": ["ap"]
+            },
+            {
+                "input": [["brother", "bride", "brave", "broom"]],
+                "expected_output": ["br"]
+            },
+            {
+                "input": [["cat", "cattle", "caterpillar", "catastrophe"]],
+                "expected_output": ["cat"]
+            }
+    ],
+
+    "valid_parentheses": [
+        {
+            "input": ["()"],
+            "expected_output": [true]
+        },
+        {
+            "input": ["()[]{}"],
+            "expected_output": [true]
+        },
+        {
+            "input": ["(]"],
+            "expected_output": [false]
+        },
+        {
+            "input": ["([)]"],
+            "expected_output": [false]
+        },
+        {
+            "input": ["([])"],
+            "expected_output": [true]
+        }
+    ],
+
+    "merge_two_lists": [
+        {
+            "input": [[1, 2, 4], [1, 3, 4]],
+            "expected_output": [[1, 1, 2, 3, 4, 4]]
+        },
+        {
+            "input": [[], []],
+            "expected_output": [[]]
+        },
+        {
+            "input": [[], [0]],
+            "expected_output": [[0]]
+        },
+        {
+            "input": [[10,13,22], [2,4,6]],
+            "expected_output": [[2, 4, 6, 10, 13, 22]]
+        },
+        {
+            "input": [[7, 15], [9]],
+            "expected_output": [[7, 9, 15]]
+        }
+    ],
+
+    "add_two_numbers" : [
+        {
+            "input": [[2, 4, 3], [5, 6, 4]],
+            "expected_output": [[7, 0, 8]]
+        },
+        {
+            "input": [[0], [0]],
+            "expected_output": [[0]]
+        },
+        {
+            "input": [[9, 9, 9, 9, 9, 9, 9], [9, 9, 9, 9]],
+            "expected_output": [[8, 9, 9, 9, 0, 0, 0, 1]]
+        },
+        {
+            "input": [[0, 5, 8, 6], [1, 2, 1]],
+            "expected_output": [[1, 7, 9, 6]]
+        },
+        {
+            "input": [[9, 5, 3, 1], [5, 5, 5, 5]],
+            "expected_output": [[4, 1, 9, 6]]
+        }
+    ],
+
+    "longest_substring" : [
+        {
+            "input": ["abcabcbb"],
+            "expected_output": [3]
+        },
+        {
+            "input": ["bbbbb"],
+            "expected_output": [1]
+        },
+        {
+            "input": ["pwwkew"],
+            "expected_output": [3]
+        },
+        {
+            "input": ["cppsttt"],
+            "expected_output": [3]
+        },
+        {
+            "input": ["dvvddo"],
+            "expected_output": [2]
+        }
+    ],
+
+    "longest_palindrome" : [
+        {
+            "input": ["babad"],
+            "expected_output": ["bab"]
+        },
+        {
+            "input": ["cbbd"],
+            "expected_output": ["bb"]
+        },
+        {
+            "input": ["ac"],
+            "expected_output": ["a"]
+        },
+        {
+            "input": ["levelheaded"],
+            "expected_output": ["level"]
+        },
+        {
+            "input": ["madamracecar"],
+            "expected_output": ["racecar"]
+        }
+    ],
+    
+    "reverse_integer" : [
+        {
+            "input": [123],
+            "expected_output": [321]
+        },
+        {
+            "input": [-123],
+            "expected_output": [-321]
+        },
+        {
+            "input": [120],
+            "expected_output": [21]
+        },
+        {
+            "input": [0],
+            "expected_output": [0]
+        },
+        {
+            "input": [1534236469],
+            "expected_output": [0]
+        }
+    ],
+
+    "str_int_atoi" : [
+        {
+            "input": ["42"],
+            "expected_output": [42]
+        },
+        {
+            "input": [" -042"],
+            "expected_output": [-42]
+        },
+        {
+            "input": ["1337c0d3"],
+            "expected_output": [1337]
+        },
+        {
+            "input": ["words and 987"],
+            "expected_output": [0]
+        },
+        {
+            "input": ["0-1"],
+            "expected_output": [0]
+        }
+    ],
+
+    "median_sorted_arrays" : [
+        {
+            "input": [[1, 3], [2]],
+            "expected_output": [2.0]
+        },
+        {
+            "input": [[1, 2], [3, 4]],
+            "expected_output": [2.5]
+        },
+        {
+            "input": [[0, 0], [0, 0]],
+            "expected_output": [0.0]
+        },
+        {
+            "input": [[0,1], [1, 6, 7]],
+            "expected_output": [1.0]
+        },
+        {
+            "input": [[7, 8, 9, 14], [17, 25]],
+            "expected_output": [11.5]
+        }
+    ],
+
+    "regex_match" : [
+        {
+            "input": ["aa", "a"],
+            "expected_output": [false]
+        },
+        {
+            "input": ["aa", "a*"],
+            "expected_output": [true]
+        },
+        {
+            "input": ["ab", ".*"],
+            "expected_output": [true]
+        },
+        {
+            "input": ["aab", ".a."],
+            "expected_output": [true]
+        },
+        {
+            "input": ["mississippi", "mis*is*p*."],
+            "expected_output": [false]
+        }
+    ],
+
+    "merge_k_lists" : [
+        {
+            "input": [[[1, 4, 5], [1, 3, 4], [2, 6]]],
+            "expected_output": [[1, 1, 2, 3, 4, 4, 5, 6]]
+        },
+        {
+            "input": [[[]]],
+            "expected_output": [[]]
+        },
+        {
+            "input": [[]],
+            "expected_output": [[]]
+        },
+        {
+            "input": [[[10,13,22], [2,4,6]]],
+            "expected_output": [[2, 4, 6, 10, 13, 22]]
+        },
+        { "input": [[[7, 15], [9]]], 
+            "expected_output": [[7, 9, 15]] 
+        }
+    ],
+    "first_missing_positive" : [
+        {
+            "input": [[1, 2, 0]],
+            "expected_output": [3]
+        },
+        {
+            "input": [[3, 4, -1, 1]],
+            "expected_output": [2]
+        },
+        {
+            "input": [[7, 8, 9, 11, 12]],
+            "expected_output": [1]
+        },
+        {
+            "input": [[1, 2, 3, 4, 5]],
+            "expected_output": [6]
+        },
+        {
+            "input": [[-1, -2, -3, -4, -5]],
+            "expected_output": [1]
+        }
+    ],
+
+    "trapping_rain_water" : [
+        {
+            "input": [[0,1,0,2,1,0,1,3,2,1,2,1]],
+            "expected_output": [6]
+        },
+        {
+            "input": [[4,2,0,3,2,5]],
+            "expected_output": [9]
+        },
+        {
+            "input": [[3,0,0,2,0,4]],
+            "expected_output": [10]
+        },
+        {
+            "input": [[2,0,2]],
+            "expected_output": [2]
+        },
+        {
+            "input": [[1,1,1,1,1]],
+            "expected_output": [0]
+        }
+    ]
+
+  }
+  
