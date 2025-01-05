@@ -5,8 +5,7 @@ import pandas as pd
 import json
 import subprocess
 import tempfile
-import psutil
-
+import tracemalloc
 # Connecting the paths of all problems
 sys.path.insert(0, './main/problems/easy')
 sys.path.insert(0, './main/problems/medium')
@@ -76,30 +75,28 @@ def create_summary(st, dataset):
 def call_problem_subprocess(problem_name, args):
     with tempfile.NamedTemporaryFile(mode='w+', delete=False) as temp_file:
         temp_file.write('import sys\n')
-        temp_file.write('import tracemalloc\n')
         temp_file.write('sys.path.insert(0, \'./main/problems/easy\')\n')
         temp_file.write('sys.path.insert(0, \'./main/problems/medium\')\n')
         temp_file.write('sys.path.insert(0, \'./main/problems/hard\')\n')
         temp_file.write(f'import {problem_name[0]}\n')
         temp_file.write(f'import json\n')
-        temp_file.write('tracemalloc.start()\n')
-        temp_file.write(f'result = {problem_name[0]}.{problem_name[1]}(*{args})\n')
-        temp_file.write('current, peak = tracemalloc.get_traced_memory()\n')
-        temp_file.write('print(json.dumps({"result": result, "peak_memory": peak}))\n')
+        temp_file.write(f'print(json.dumps({problem_name[0]}.{problem_name[1]}(*{args})))')
         temp_file.flush()
-
         start_time = time.time()
+        tracemalloc.start()
+        
         try:
             result = subprocess.check_output([sys.executable, temp_file.name], stderr=subprocess.PIPE, text=True).strip()
+            memory = tracemalloc.get_traced_memory()
             runtime = (time.time() - start_time) * 1000
-            result_data = json.loads(result)
-            return result_data["result"], runtime, result_data["peak_memory"], None
+            return json.loads(result), runtime, memory[0], None
         except subprocess.CalledProcessError as e:
             runtime = (time.time() - start_time) * 1000
-            return None, runtime, 0, e.stderr
+            memory = tracemalloc.get_traced_memory()
+            return None, runtime, memory[0], e.stderr
         finally:
+            tracemalloc.stop()
             os.unlink(temp_file.name)
-
 
 def solution_check(problem_name, cases_data):
     results = []
@@ -145,7 +142,7 @@ def main():
             }
             status = solution_check(categories[diff][l], test_cases)
             create_summary(status, dataset)
-            print("\n")
+            # print("\n")
             
             case_data = pd.DataFrame(dataset)
             case_data.set_index('Test Case', inplace=True)
@@ -157,12 +154,12 @@ def main():
             total_dataset["Average Run Time (ms)"].append(average_runtime)
             total_dataset["Average Memory Usage (mb)"].append(average_memory)
 
-            print(case_data)
-            print("\n")
+            # print(case_data)
+            # print("\n")
             export_data(case_data, categories[diff][l][0])
-            print(f"Average Run Time: {average_measure(case_data)[0]} milliseconds")
-            print(f"Average Memory Usage: {average_measure(case_data)[1]} megabytes")
-            print("\n")
+            # print(f"Average Run Time: {average_measure(case_data)[0]} milliseconds")
+            # print(f"Average Memory Usage: {average_measure(case_data)[1]} megabytes")
+            # print("\n")
 
 
 
