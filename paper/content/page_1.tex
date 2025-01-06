@@ -1,68 +1,49 @@
 
-\section{Research Methodology}
+\section{Background and Related Work}
 
-\subsection{Description of the Benchmark Framework}
+\subsection{Overview of AI in Software Engineering}
+Artificial intelligence (AI) in software development involves using machine learning and automation to streamline programming workflows, improve efficiency, and in some cases, replace tasks traditionally performed by human developers. Over the past few years, AI has rapidly advanced, becoming an integral part of modern software engineering. Tools such as GitHub Copilot, powered by OpenAI Codex, and ChatGPT have gained widespread recognition for their ability to assist in generating, debugging, and optimizing code. In comparison to more standard coding utilities chat like tools, GitHub Copilot integrates directly into development environments, offering contextual code suggestions that help programmers save time and reduce errors during repetitive tasks. 
 
-Why Leetcode was chosen as a representative platform for programming tasks.
+Similarly, advanced models like Claude and Gemini, which are considered one of the main competitors to ChatGPT, despite being general use-oriented models are also designed to handle complex programming challenges, showcasing their capacity for nuanced problem-solving and software design. These developments highlight the growing potential of AI to transform the field, not just as an assistant but also as a tool capable of overtaking a broader range of programming responsibilities, raising rather controversial questions about its role in the future of software engineering.
 
-Explanation of the benchmark framework's design to ensure fairness and consistency.
+Adding to this landscape, Devin AI was introduced by Cognition Labs in early 2024 as the world's first autonomous AI software engineer. Devin was advertised as being able to perform tasks such as coding, debugging and project completion on its own, sparking considerable interest in the tech community. However, subsequent analysis revealed inconsistencies between these claims and Devin's actual performance.
 
-Steps to automate problem feeding and solution evaluation for AI models.
+Thus, as for today, Artificial intelligence is still seen a tool, with professionals in software engineering fields having a very skeptical attitude towards the idea of independent AI-powered utilities that can transform the client’s ideas to a fully functional product
 
-\subsubsection{Selection and Categorization of Programming Problems}
+\subsection{Benchmarking for Programming AI}
 
-Criteria for selecting programming problems (e.g., diversity in difficulty levels: easy, medium, hard).
+Benchmarks are crucial for assessing the capabilities and limitations of AI models. They provide standardized metrics to evaluate an AI's performance in specific areas, such as natural language processing (NLP) or programming. In NLP, benchmarks test how well AI systems understand and generate human language, offering insights into their practical applicability. For programming, benchmarks like HumanEval and MBPP (Mostly Basic Python Problems) have been used to measure AI performance. However, these benchmarks often focus on isolated tasks that lack the complexity of real-world programming scenarios. To bridge this gap, this study introduces a tailored benchmark that evaluates AI models on multiple dimensions, including runtime efficiency, memory usage, and solution correctness. By emphasizing real-world coding conditions and incorporating diverse challenges, this benchmark aims to provide a more comprehensive and realistic assessment of AI capabilities in software development.
 
-Examples of specific problem categories and why they were chosen.
+\subsection{LeetCode and Programming Problem Sources}
+LeetCode is one of the most popular platforms for coding challenges, widely regarded as a gold standard among both aspiring and professional developers. Known for its extensive library of algorithmic and data structure problems, LeetCode has become a preferred resource for honing programming skills and preparing for technical interviews. Its reputation for offering high-quality, industry-relevant problems made it the ideal choice for this study’s benchmark. The platform’s diverse problem set spans a range of difficulty levels—easy, medium, and hard—allowing for a structured and balanced evaluation of AI performance. By sourcing tasks from LeetCode, this benchmark ensures that the problems reflect practical coding scenarios while maintaining rigorous standards. The categorization of tasks by difficulty further enhances the benchmark's ability to measure the capabilities of AI models across varying levels of challenge, providing meaningful insights into their real-world applicability.
+% \subsection{Overview of AI Models Evaluated}
 
+% Brief introduction to the AI models tested (e.g., GPT models, Gemini, or other programming-specific models, Claude).
 
+% Key capabilities of each model (e.g., natural language understanding, multi-step reasoning).
 
-The selection and categorization of programming problems is a foundational step in designing an effective benchmarking framework. For this study, the problems were chosen to represent a diverse and balanced set of challenges, ensuring that the evaluation captures the full spectrum of skills required in software development.
+% Why these models were chosen and their relevance to programming tasks.
 
-The selection process prioritized problems that reflect common themes in programming, such as algorithms, data structures, and computational logic. These categories were chosen because they are fundamental to both academic and practical software engineering tasks. Problems that demand optimization, reasoning, and debugging skills were included to test the AI's ability to handle both routine and advanced challenges. Care was also taken to include problems of varying complexity, categorized as easy, medium, and hard, to evaluate the models’ performance across different levels of difficulty.
+% \subsection{Evaluation Metrics and Criteria}
 
-Easy problems typically involve straightforward implementations, such as basic arithmetic operations or simple control structures, designed to test whether the AI can understand and respond to basic instructions accurately. Medium-level problems often introduce more complex requirements, such as recursion, intermediate data structures (e.g., linked lists or trees), or algorithmic optimizations. Hard problems, on the other hand, often require deep problem-solving skills, including advanced algorithms (e.g., dynamic programming or graph theory), intricate logic, and creative approaches to meet strict efficiency constraints.
+% Metrics used to measure AI performance, such as:
 
-To ensure a representative dataset, problems were selected from Leetcode, a widely recognized platform for programming challenges. This source was chosen for its well-structured problem descriptions, comprehensive test cases, and relevance to real-world coding scenarios. Problems with clear success criteria were prioritized to simplify the evaluation process and ensure that AI outputs could be objectively assessed.
+%     Correctness (did the solution work?).
 
-Categorizing the problems by type and difficulty also helps identify the specific strengths and weaknesses of the AI models. For example, analyzing the performance across problem types can reveal whether a model excels in certain areas, such as mathematical computations, but struggles with others, such as handling edge cases in dynamic programming problems. This structured approach to selection and categorization ensures a comprehensive and meaningful assessment of AI capabilities in solving programming tasks.
+%     Efficiency (e.g., runtime complexity or memory usage).
 
-\subsubsection{Characteristics of the Problem Set}
-
-Statistical overview of the problem set (e.g., number of problems, distribution by difficulty).
-
-Importance of including real-world-relevant challenges in the dataset.
-
-Avoiding bias by ensuring the problem set covers a wide range of skills (e.g., coding logic, optimization, error handling).
-
-\subsection{Overview of AI Models Evaluated}
-
-Brief introduction to the AI models tested (e.g., GPT models, Gemini, or other programming-specific models, Claude).
-
-Key capabilities of each model (e.g., natural language understanding, multi-step reasoning).
-
-Why these models were chosen and their relevance to programming tasks.
-
-\subsection{Evaluation Metrics and Criteria}
-
-Metrics used to measure AI performance, such as:
-
-    Correctness (did the solution work?).
-
-    Efficiency (e.g., runtime complexity or memory usage).
-
-    Clarity (how well-structured the solution is).
+%     Clarity (how well-structured the solution is).
 
 
 
-Evaluating the performance of AI models in solving programming problems requires a clear and rigorous set of metrics to ensure consistency and objectivity. The chosen metrics in this study are designed to assess the correctness, efficiency, and overall quality of solutions produced by AI models, reflecting their applicability to real-world programming tasks.
+% Evaluating the performance of AI models in solving programming problems requires a clear and rigorous set of metrics to ensure consistency and objectivity. The chosen metrics in this study are designed to assess the correctness, efficiency, and overall quality of solutions produced by AI models, reflecting their applicability to real-world programming tasks.
     
-The primary criterion for evaluation is correctness, which measures whether the solution provided by the AI satisfies the problem’s requirements. This involves running the AI-generated code against a suite of test cases, including edge cases, and determining if all outputs are as expected. Correctness serves as the most fundamental benchmark, as a solution that fails test cases cannot be considered reliable or functional.
+% The primary criterion for evaluation is correctness, which measures whether the solution provided by the AI satisfies the problem’s requirements. This involves running the AI-generated code against a suite of test cases, including edge cases, and determining if all outputs are as expected. Correctness serves as the most fundamental benchmark, as a solution that fails test cases cannot be considered reliable or functional.
     
-In addition to correctness, efficiency is a critical metric. It assesses the performance of the AI’s solutions in terms of runtime complexity and resource utilization. Problems involving large inputs or computationally intensive operations are particularly valuable in highlighting whether the AI can generate solutions that meet the expected efficiency constraints, such as adhering to optimal time and space complexity.
+% In addition to correctness, efficiency is a critical metric. It assesses the performance of the AI’s solutions in terms of runtime complexity and resource utilization. Problems involving large inputs or computationally intensive operations are particularly valuable in highlighting whether the AI can generate solutions that meet the expected efficiency constraints, such as adhering to optimal time and space complexity.
     
-The **readability and structure of the code are also important factors in the evaluation. While not strictly necessary for functional correctness, well-structured and readable code is essential for maintainability and collaboration in professional software development. This criterion examines whether the AI produces solutions that follow standard programming practices, such as proper variable naming, modular design, and clear logical flow.
+% The **readability and structure of the code are also important factors in the evaluation. While not strictly necessary for functional correctness, well-structured and readable code is essential for maintainability and collaboration in professional software development. This criterion examines whether the AI produces solutions that follow standard programming practices, such as proper variable naming, modular design, and clear logical flow.
     
-To provide a comprehensive assessment, the study also incorporates metrics for **problem-solving completeness**. This involves evaluating whether the AI model effectively interprets the problem statement and generates a fully implemented solution, as opposed to incomplete or partially functional outputs. Failure to address all aspects of the problem, even if some test cases pass, is considered a limitation of the model.
+% To provide a comprehensive assessment, the study also incorporates metrics for **problem-solving completeness**. This involves evaluating whether the AI model effectively interprets the problem statement and generates a fully implemented solution, as opposed to incomplete or partially functional outputs. Failure to address all aspects of the problem, even if some test cases pass, is considered a limitation of the model.
     
-Finally, consistency is monitored across multiple problem-solving attempts to evaluate the reliability of the models. This ensures that results are not anomalous and that the AI performs consistently across diverse tasks and repeated runs. By combining these metrics, the evaluation framework provides a holistic picture of the AI’s capabilities, strengths, and limitations in solving programming problems.
+% Finally, consistency is monitored across multiple problem-solving attempts to evaluate the reliability of the models. This ensures that results are not anomalous and that the AI performs consistently across diverse tasks and repeated runs. By combining these metrics, the evaluation framework provides a holistic picture of the AI’s capabilities, strengths, and limitations in solving programming problems.

@@ -1,31 +1,112 @@
-\section{Results and Analysis}
+\section{Benchmark Design and Implementation}
 
-\subsection{Quantitative Results}
+\subsection{Problem Selection and Categorization}
 
-Performance metrics (e.g., success rates on easy, medium, and hard problems).
+During the selection process of the problems which would then be used for assessing the capabilities of AI models many aspects could be put at the priority: difficulty, variety, popularity. Taking int account the main goal of this research, the selection of problems should be based solely on how often they appear on the interviews. On the LeetCode platform, problems were filtered by the category Top Interview Questions, focusing on tasks considered crucial for professional software development. From this refined selection, the five most popular problems from each difficulty level—easy, medium, and hard—were chosen. This method ensured that the benchmark incorporated tasks ranging from fundamental algorithms to complex scenarios, as both the usage of only difficult or only simple problems would not represent fully abilities of the models.
 
-Comparison of models based on metrics such as speed, efficiency, and accuracy.
+Furthermore, choosing well-known and frequently attempted problems enhances the benchmark’s credibility and relevance. These tasks have been extensively solved and discussed by the programming community, providing the most refined solutions and this way. This factor eliminates any chance of low-key errors, which therefore makes such solutions perfect for using them as a reference. Emphasizing popularity and a balance of difficulty levels, the benchmark achieves both accessibility for AI models and a robust evaluation of their programming capabilities.
 
-Visual representation of results (tables and graphs showing success rates by difficulty).
+\subsection{Technologies Used}
 
-\subsection{Qualitative Assessment}
 
-Analysis of how the models approach problem-solving (e.g., whether they use brute force, optimal solutions, or heuristics).
+A variety of technologies were used to effectively design and implement the benchmark. The programming language Python was chosen for the development of this benchmark because of its wide range of modules for working with data and its widespread use in AI development.
 
-Examples of well-solved problems and those where AI models failed.
+For each, the OpenAI API was used to integrate models such as GPT-3.5 and GPT-4, with plans to include Anthropic's Claude and Google's Gemini in future updates.
+In fact, the availability of all the required APIs played a crucial role in the choice of programming language.
 
-Discussion of common errors (e.g., logical issues, misunderstanding problem statements, or incomplete outputs).
+Of all the Python modules used in this project, one called "pandas" was used most often to organise, process and summarise the benchmark results, which were then exported to Excel for easy review and further visual processing. 
 
-\subsection{Comparison to Human Performance}
+Visualisations of performance metrics were created using the matplotlib module. 
 
-How AI models perform in comparison to average Leetcode users (use most common solution).
+Execution of both AI-generated and LeetCode-parsed solutions was handled using the subprocess for running isolated blocks of code
 
-Cases where AI outperformed humans (e.g., faster execution of simple problems).
+Two built-in modules were used for monitoring, tracemalloc for memory tracking, time for runtime measurement.
 
-Scenarios where humans excelled.
-\subsection{Statistical Analysis}
 
-Maybe some scientific methods to analyze the data.
+\subsection{AI Models Evaluated}
+
+
+The benchmark evaluated some of the leading AI models in the field, including GPT-3.5 and GPT-4 from OpenAI, Claude from Anthropic, and Gemini from Google. These models were chosen based on their popularity, accessibility, and proven capabilities in code generation and software engineering tasks.
+
+GPT-3.5 and GPT-4: These OpenAI models represent state-of-the-art advancements in natural language understanding and generation.
+
+Claude: Developed by Anthropic, Claude emphasizes safety and a nuanced understanding of prompts, making it a strong contender in programming tasks.
+
+Gemini: Created by Google, Gemini is designed to tackle complex problem-solving tasks with an emphasis on general intelligence.
+
+The inclusion of these models ensures that the benchmark provides a well-rounded and comprehensive comparison of the latest AI systems in a standardized testing environment.
+
+
+\subsection{Benchmark Workflow}
+
+The benchmark workflow was carefully structured to evaluate the performance of AI and human solutions on selected programming tasks. The process begins with loading problems from the LeetCode dataset and corresponding test cases stored in JSON files. AI solutions are generated using pre-defined prompts, while human solutions are sourced from existing implementations.
+
+Each generated solution is executed against predefined test cases using subprocess, ensuring isolation and consistent execution. Memory usage is tracked with tracemalloc, and metrics such as runtime duration and error outputs are recorded to assess the correctness and performance of each solution. Aggregated metrics are then analyzed and visualized to facilitate clear comparisons between AI and human performance.
+
+This structured and repeatable workflow guarantees consistency and transparency, enabling fair comparisons between different AI models and human baselines.
+
+
+
+
+\subsection{Evaluation Metrics}
+
+When evaluating the performance of AI models in solving programming problems, a set of standardized metrics is essential to ensure objectivity and consistency.
+The benchmark uses a variety of metrics to thoroughly evaluate the performance of both AI and human-generated solutions. These metrics ensure a well-rounded assessment of programming capabilities.
+
+\subsubsection{Success Rate}
+
+This metric determines how many test cases each solution successfully solves, expressed as a percentage. It serves as the primary measure of correctness and overall effectiveness.
+
+\subsubsection{Runtime Performance} 
+
+This measures the time it takes for each solution to execute, expressed in milliseconds. Faster runtimes indicate better computational efficiency, which is crucial in performance-critical scenarios.
+
+\subsubsection{Memory Usage} 
+
+Peak memory consumption during the execution of each solution is monitored in bytes using tracemalloc. This metric assesses the resource efficiency of the implementations, particularly important for systems with limited memory resources.
+
+
+
+
+
+% \subsection{Second Benchmark Version}
+
+
+
+
+
+
+
+
+
+% \section{Results and Analysis}
+
+% \subsection{Quantitative Results}
+
+% Performance metrics (e.g., success rates on easy, medium, and hard problems).
+
+% Comparison of models based on metrics such as speed, efficiency, and accuracy.
+
+% Visual representation of results (tables and graphs showing success rates by difficulty).
+
+% \subsection{Qualitative Assessment}
+
+% Analysis of how the models approach problem-solving (e.g., whether they use brute force, optimal solutions, or heuristics).
+
+% Examples of well-solved problems and those where AI models failed.
+
+% Discussion of common errors (e.g., logical issues, misunderstanding problem statements, or incomplete outputs).
+
+% \subsection{Comparison to Human Performance}
+
+% How AI models perform in comparison to average Leetcode users (use most common solution).
+
+% Cases where AI outperformed humans (e.g., faster execution of simple problems).
+
+% Scenarios where humans excelled.
+% \subsection{Statistical Analysis}
+
+% Maybe some scientific methods to analyze the data.
 
 
 

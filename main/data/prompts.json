@@ -1,0 +1,105 @@
+{
+   "two_sum_ai": [
+        {
+            "system_prompt": "You are a software engineer tasked with solving the 'Two Sum' problem. You are provided with a Python function template. Write the solution logic only inside the provided function template and do not redefine the function or include any text outside of the code. Make sure you do not repeat the same element twice and take into account the content of the template.",
+            "user_prompt": "### Problem Statement\nGiven an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`.\n\n### Constraints\n1. Each input would have exactly one solution.\n2. You may not use the same element twice.\n3. You can return the answer in any order.\n\n### Requirements\n1. Do not modify the provided function signature or redefine the function.\n2. Write the solution logic inside the provided function template.\n3. You can add helper functions if necessary but do not modify the outer function.\n4. Do not include any text outside of the Python code.\n\n### Example\n**Input:** `nums = [2, 7, 11, 15]`, `target = 9`\n**Output:** `[0, 1]`\n\n### Function Template\n```python\ndef twoSum(nums, target):\n    # Write your logic here\n    pass\n```"
+        }
+    ],
+
+    "roman_to_int_ai": [
+        {
+            "system_prompt": "You are a software engineer tasked with solving the 'Roman to Integer' problem. You are provided with a Python function template. Write the solution logic only inside the provided function template and do not redefine the function or include any text outside of the code.",
+            "user_prompt": "### Problem Statement\nGiven a Roman numeral, convert it to an integer.\n\n### Constraints\n1. Input is guaranteed to be within the range from 1 to 3999.\n2. The input string `s` will always represent a valid Roman numeral.\n\n### Requirements\n1. Do not modify the provided function signature or redefine the function.\n2. Write the solution logic inside the provided function template.\n3. You can add helper functions if necessary but do not modify the outer function.\n4. Do not include any text outside of the Python code.\n\n### Roman Numeral Rules\nRoman numerals are represented by seven different symbols: `I`, `V`, `X`, `L`, `C`, `D`, and `M`.\n\n### Example\n**Input:** `s = \"III\"`\n**Output:** `3`\n\n**Input:** `s = \"LVIII\"`\n**Output:** `58`\n**Explanation:** L = 50, V = 5, III = 3.\n\n**Input:** `s = \"MCMXCIV\"`\n**Output:** `1994`\n**Explanation:** M = 1000, CM = 900, XC = 90, IV = 4.\n\n### Function Template\n```python\ndef romanToInt(s):\n    # Write your logic here\n    pass\n```"
+        }
+    ],
+
+    "longest_common_prefix_ai": [
+        {
+            "system_prompt": "You are a software engineer tasked with solving the 'Longest Common Prefix' problem. You are provided with a Python function template. Write the solution logic only inside the provided function template and do not redefine the function or include any text outside of the code.",
+            "user_prompt": "### Problem Statement\nWrite a function to find the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string `\"\"`.\n\n### Constraints\n1. The array of strings `strs` will have a length between 0 and 200.\n2. Each string in `strs` will have a length between 0 and 200.\n3. All strings consist of only lowercase English letters (`a-z`).\n\n### Requirements\n1. Do not modify the provided function signature or redefine the function.\n2. Write the solution logic inside the provided function template.\n3. You can add helper functions if necessary but do not modify the outer function.\n4. Do not include any text outside of the Python code.\n\n### Example\n**Input:** `strs = [\"flower\",\"flow\",\"flight\"]`\n**Output:** `\"fl\"`\n\n**Input:** `strs = [\"dog\",\"racecar\",\"car\"]`\n**Output:** `\"\"`\n**Explanation:** There is no common prefix among the input strings.\n\n**Input:** `strs = [\"ab\",\"a\"]`\n**Output:** `\"a\"`\n\n### Function Template\n```python\ndef longestCommonPrefix(strs):\n    # Write your logic here\n    pass\n```"
+        }
+    ],
+
+    "valid_parentheses_ai": [
+        {
+            "system_prompt": "You are a software engineer tasked with solving the 'Valid Parentheses' problem. You are provided with a Python function template. Write the solution logic only inside the provided function template and do not redefine the function or include any text outside of the code.",
+            "user_prompt": "### Problem Statement\nGiven a string `s` containing just the characters `'('`, `')'`, `'{'`, `'}'`, `'['`, and `']'`, determine if the input string is valid.\n\n### Validity Rules\nA string is considered valid if:\n1. Open brackets are closed by the same type of brackets.\n2. Open brackets are closed in the correct order.\n3. Every close bracket has a corresponding unmatched open bracket before it.\n\n### Constraints\n1. The input string `s` will have a length between 1 and 10⁴.\n2. `s` consists only of the characters `'('`, `')'`, `'{'`, `'}'`, `'['`, and `']'`.\n\n### Requirements\n1. Do not modify the provided function signature or redefine the function.\n2. Write the solution logic inside the provided function template.\n3. You can add helper functions if necessary but do not modify the outer function.\n4. Do not include any text outside of the Python code.\n\n### Example\n**Input:** `s = \"()\"`\n**Output:** `True`\n\n**Input:** `s = \"()[]{}\"`\n**Output:** `True`\n\n**Input:** `s = \"(]\"`\n**Output:** `False`\n\n**Input:** `s = \"([)]\"`\n**Output:** `False`\n\n**Input:** `s = \"{[]}\"`\n**Output:** `True`\n\n### Function Template\n```python\ndef isValid(s):\n    # Write your logic here\n    pass\n```"
+        }
+    ],
+
+    "merge_two_lists_ai": [
+        {
+            "system_prompt": "You are a software engineer tasked with solving the 'Merge Two Sorted Lists' problem. You are provided with a Python function template. Write the solution logic only inside the provided function template and do not redefine the function or include any text outside of the code.",
+            "user_prompt": "### Problem Statement\nYou are given the heads of two sorted linked lists `list1` and `list2`. Merge the two lists into one sorted linked list and return the head of the merged list.\n\n### Constraints\n1. The number of nodes in both lists is in the range `[0, 50]`.\n2. `-100 <= Node.val <= 100`\n3. Both `list1` and `list2` are sorted in non-decreasing order.\n\n### Requirements\n1. Do not modify the provided function signature or redefine the function.\n2. Write the solution logic inside the provided function template.\n3. You can add helper functions if necessary but do not modify the outer function.\n4. Do not include any text outside of the Python code.\n\n### Example\n**Input:** `list1 = [1,2,4]`, `list2 = [1,3,4]`\n**Output:** `[1,1,2,3,4,4]`\n\n**Input:** `list1 = []`, `list2 = []`\n**Output:** `[]`\n\n**Input:** `list1 = []`, `list2 = [0]`\n**Output:** `[0]`\n\n### Function Template\n```python\nclass ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\ndef mergeTwoLists(list1, list2):\n    # Write your logic here\n    pass\n```"
+        }
+        ],
+
+        "add_two_numbers_ai": [
+            {
+                "system_prompt": "You are a software engineer tasked with solving the 'Add Two Numbers' problem. You are provided with a Python function template. Write the solution logic only inside the provided function template and do not redefine the function or include any text outside of the code.",
+                "user_prompt": "### Problem Statement\nYou are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.\n\n### Constraints\n1. The number of nodes in each linked list is in the range `[1, 100]`.\n2. `0 <= Node.val <= 9`\n3. It is guaranteed that the list represents a number that does not have leading zeros.\n\n### Requirements\n1. Do not modify the provided function signature or redefine the function.\n2. Write the solution logic inside the provided function template.\n3. You can add helper functions if necessary but do not modify the outer function.\n4. Do not include any text outside of the Python code.\n\n### Example\n**Input:** `l1 = [2,4,3]`, `l2 = [5,6,4]`\n**Output:** `[7,0,8]`\n**Explanation:** `342 + 465 = 807`. The digits are stored in reverse order, so the answer is `[7,0,8]`.\n\n### Function Template\n```python\nclass ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\ndef addTwoNumbers(l1, l2):\n    # Write your logic here\n    pass\n```"
+            }
+        ],
+    
+        "longest_substring_ai": [
+            {
+                "system_prompt": "You are a software engineer tasked with solving the 'Longest Substring Without Repeating Characters' problem. You are provided with a Python function template. Write the solution logic only inside the provided function template and do not redefine the function or include any text outside of the code.",
+                "user_prompt": "### Problem Statement\nGiven a string `s`, find the length of the longest substring without repeating characters.\n\n### Constraints\n1. `0 <= s.length <= 5 * 10⁴`\n2. `s` consists of English letters, digits, symbols, and spaces.\n\n### Requirements\n1. Do not modify the provided function signature or redefine the function.\n2. Write the solution logic inside the provided function template.\n3. You can add helper functions if necessary but do not modify the outer function.\n4. Do not include any text outside of the Python code.\n\n### Example\n**Input:** `s = \"abcabcbb\"`\n**Output:** `3`\n**Explanation:** The answer is \"abc\", with the length of 3.\n\n**Input:** `s = \"bbbbb\"`\n**Output:** `1`\n\n**Input:** `s = \"pwwkew\"`\n**Output:** `3`\n**Explanation:** The answer is \"wke\", with the length of 3.\n\n### Function Template\n```python\ndef lengthOfLongestSubstring(s):\n    # Write your logic here\n    pass\n```"
+            }
+        ],
+    
+        "longest_palindrome_ai": [
+            {
+                "system_prompt": "You are a software engineer tasked with solving the 'Longest Palindromic Substring' problem. You are provided with a Python function template. Write the solution logic only inside the provided function template and do not redefine the function or include any text outside of the code.",
+                "user_prompt": "### Problem Statement\nGiven a string `s`, return the longest palindromic substring in `s`.\n\n### Constraints\n1. `1 <= s.length <= 1000`\n2. `s` consist of only digits and English letters.\n\n### Requirements\n1. Do not modify the provided function signature or redefine the function.\n2. Write the solution logic inside the provided function template.\n3. You can add helper functions if necessary but do not modify the outer function.\n4. Do not include any text outside of the Python code.\n\n### Example\n**Input:** `s = \"babad\"`\n**Output:** `\"bab\"`\n**Explanation:** Note that \"aba\" is also a valid answer.\n\n### Function Template\n```python\ndef longestPalindrome(s):\n    # Write your logic here\n    pass\n```"
+            }
+        ],
+    
+        "reverse_integer_ai": [
+            {
+                "system_prompt": "You are a software engineer tasked with solving the 'Reverse Integer' problem. You are provided with a Python function template. Write the solution logic only inside the provided function template and do not redefine the function or include any text outside of the code.",
+                "user_prompt": "### Problem Statement\nGiven a signed 32-bit integer `x`, return `x` with its digits reversed. If reversing `x` causes the value to go outside the signed 32-bit integer range [-2^31, 2^31 - 1], return 0.\n\n### Constraints\n1. The input must fit in a 32-bit signed integer.\n\n### Requirements\n1. Do not modify the provided function signature or redefine the function.\n2. Write the solution logic inside the provided function template.\n3. You can add helper functions if necessary but do not modify the outer function.\n4. Do not include any text outside of the Python code.\n\n### Example\n**Input:** `x = 123`\n**Output:** `321`\n\n**Input:** `x = -123`\n**Output:** `-321`\n\n### Function Template\n```python\ndef reverse(x):\n    # Write your logic here\n    pass\n```"
+            }
+        ],
+    
+        "str_int_atoi_ai": [
+            {
+                "system_prompt": "You are a software engineer tasked with solving the 'String to Integer (atoi)' problem. You are provided with a Python function template. Write the solution logic only inside the provided function template and do not redefine the function or include any text outside of the code.",
+                "user_prompt": "### Problem Statement\nImplement the `myAtoi(string s)` function, which converts a string to a 32-bit signed integer (similar to C/C++'s atoi function).\n\n### Constraints\n1. Discard all leading whitespace characters.\n2. Take optional '+' or '-' as the sign.\n3. Read digits until a non-digit character is found.\n4. Return the integer within the 32-bit range [-2^31, 2^31 - 1].\n\n### Requirements\n1. Do not modify the provided function signature or redefine the function.\n2. Write the solution logic inside the provided function template.\n3. You can add helper functions if necessary but do not modify the outer function.\n4. Do not include any text outside of the Python code.\n\n### Example\n**Input:** `s = \"42\"`\n**Output:** `42`\n\n**Input:** `s = \"   -42\"`\n**Output:** `-42`\n\n### Function Template\n```python\ndef myAtoi(s):\n    # Write your logic here\n    pass\n```"
+            }
+        ],
+        "median_sorted_arrays_ai": [
+            {
+                "system_prompt": "You are a software engineer tasked with solving the 'Median of Two Sorted Arrays' problem. You are provided with a Python function template. Write the solution logic only inside the provided function template and do not redefine the function or include any text outside of the code.",
+                "user_prompt": "### Problem Statement\nGiven two sorted arrays `nums1` and `nums2` of size `m` and `n`, return the median of the two sorted arrays.\n\n### Constraints\n1. The overall runtime complexity should be O(log (m+n)).\n2. `nums1` and `nums2` may be empty.\n\n### Requirements\n1. Do not modify the provided function signature or redefine the function.\n2. Write the solution logic inside the provided function template.\n3. You can add helper functions if necessary but do not modify the outer function.\n4. Do not include any text outside of the Python code.\n\n### Example\n**Input:** `nums1 = [1, 3]`, `nums2 = [2]`\n**Output:** `2.0`\n\n### Function Template\n```python\ndef findMedianSortedArrays(nums1, nums2):\n    # Write your logic here\n    pass\n```"
+            }
+        ],
+    
+        "regex_match_ai": [
+            {
+                "system_prompt": "You are a software engineer tasked with solving the 'Regular Expression Matching' problem. You are provided with a Python function template. Write the solution logic only inside the provided function template and do not redefine the function or include any text outside of the code.",
+                "user_prompt": "### Problem Statement\nImplement regular expression matching with support for '.' and '*'.\n\n### Constraints\n1. `s` and `p` consist of only lowercase English letters.\n2. '.' Matches any single character.\n3. '*' Matches zero or more of the preceding element.\n\n### Requirements\n1. Do not modify the provided function signature or redefine the function.\n2. Write the solution logic inside the provided function template.\n3. You can add helper functions if necessary but do not modify the outer function.\n4. Do not include any text outside of the Python code.\n\n### Example\n**Input:** `s = \"aa\"`, `p = \"a*\"`\n**Output:** `True`\n\n**Input:** `s = \"mississippi\"`, `p = \"mis*is*p*.\"`\n**Output:** `False`\n\n### Function Template\n```python\ndef isMatch(s, p):\n    # Write your logic here\n    pass\n```"
+            }
+        ],
+    
+        "merge_k_lists_ai": [
+            {
+                "system_prompt": "You are a software engineer tasked with solving the 'Merge k Sorted Lists' problem. You are provided with a Python function template. Write the solution logic only inside the provided function template and do not redefine the function or include any text outside of the code.",
+                "user_prompt": "### Problem Statement\nYou are given an array of `k` linked-lists, each linked-list is sorted in ascending order. Merge all the linked-lists into one sorted linked-list and return it.\n\n### Constraints\n1. The total number of nodes is between [0, 10^4].\n2. The value of each node is within [-10^4, 10^4].\n\n### Requirements\n1. Do not modify the provided function signature or redefine the function.\n2. Write the solution logic inside the provided function template.\n3. You can add helper functions if necessary but do not modify the outer function.\n4. Do not include any text outside of the Python code.\n\n### Example\n**Input:** `lists = [[1,4,5],[1,3,4],[2,6]]`\n**Output:** `[1,1,2,3,4,4,5,6]`\n\n### Function Template\n```python\nclass ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\ndef mergeKLists(lists):\n    # Write your logic here\n    pass\n```"
+            }
+        ],
+    
+        "first_missing_positive_ai": [
+            {
+                "system_prompt": "You are a software engineer tasked with solving the 'First Missing Positive' problem. You are provided with a Python function template. Write the solution logic only inside the provided function template and do not redefine the function or include any text outside of the code.",
+                "user_prompt": "### Problem Statement\nGiven an unsorted integer array `nums`, return the smallest missing positive integer.\n\n### Constraints\n1. The algorithm should run in O(n) time.\n\n### Requirements\n1. Do not modify the provided function signature or redefine the function.\n2. Write the solution logic inside the provided function template.\n3. You can add helper functions if necessary but do not modify the outer function.\n4. Do not include any text outside of the Python code.\n\n### Example\n**Input:** `nums = [3,4,-1,1]`\n**Output:** `2`\n\n**Input:** `nums = [1,2,0]`\n**Output:** `3`\n\n### Function Template\n```python\ndef firstMissingPositive(nums):\n    # Write your logic here\n    pass\n```"
+            }
+        ],
+    
+        "trapping_rain_water_ai": [
+            {
+                "system_prompt": "You are a software engineer tasked with solving the 'Trapping Rain Water' problem. You are provided with a Python function template. Write the solution logic only inside the provided function template and do not redefine the function or include any text outside of the code.",
+                "user_prompt": "### Problem Statement\nGiven `n` non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.\n\n### Constraints\n1. `0 <= height.length <= 3 * 10^4`\n2. `0 <= height[i] <= 10^5`\n\n### Requirements\n1. Do not modify the provided function signature or redefine the function.\n2. Write the solution logic inside the provided function template.\n3. You can add helper functions if necessary but do not modify the outer function.\n4. Do not include any text outside of the Python code.\n\n### Example\n**Input:** `height = [0,1,0,2,1,0,1,3,2,1,2,1]`\n**Output:** `6`\n\n**Input:** `height = [4,2,0,3,2,5]`\n**Output:** `9`\n\n### Function Template\n```python\ndef trap(height):\n    # Write your logic here\n    pass\n```"
+            }
+        ]
+}

@@ -17,8 +17,8 @@
             "expected_output": [[2, 4], [4, 2]]
         },
         {
-            "input": [[9, 0, 4, 11, 3], 20],
-            "expected_output": [[0, 3], [3, 0]]
+            "input": [[9, 0, 4, 10, 3], 20],
+            "expected_output": ["None"]
 
         }
     ],
