@@ -101,5 +101,13 @@
                 "system_prompt": "You are a software engineer tasked with solving the 'Trapping Rain Water' problem. You are provided with a Python function template. Write the solution logic only inside the provided function template and do not redefine the function or include any text outside of the code.",
                 "user_prompt": "### Problem Statement\nGiven `n` non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.\n\n### Constraints\n1. `0 <= height.length <= 3 * 10^4`\n2. `0 <= height[i] <= 10^5`\n\n### Requirements\n1. Do not modify the provided function signature or redefine the function.\n2. Write the solution logic inside the provided function template.\n3. You can add helper functions if necessary but do not modify the outer function.\n4. Do not include any text outside of the Python code.\n\n### Example\n**Input:** `height = [0,1,0,2,1,0,1,3,2,1,2,1]`\n**Output:** `6`\n\n**Input:** `height = [4,2,0,3,2,5]`\n**Output:** `9`\n\n### Function Template\n```python\ndef trap(height):\n    # Write your logic here\n    pass\n```"
             }
+        ],
+
+        "check_if_equal_ai": [
+            {
+                "system_prompt":"You are a software engineer tasked with solving the 'Trapping Rain Water' problem. You are provided with a Python function template. Write the solution logic only inside the provided function template and do not redefine the function or include any text outside of the code.",
+                "user_prompt":"### Problem Statement\nYou are given a string `s` consisting of digits. Perform the following operation repeatedly until the string has exactly two digits:\n\n1. For each pair of consecutive digits in `s`, starting from the first digit, calculate a new digit as the sum of the two digits modulo 10.\n2. Replace `s` with the sequence of newly calculated digits, maintaining the order in which they are computed.\n\nReturn `true` if the final two digits in `s` are the same; otherwise, return `false`.\n\n### Constraints\n1. `3 <= s.length <= 10^5`\n2. `s` consists of only digits.\n\n### Example\n**Input:** `s = \"3902\"`\n\n**Output:** `true`\n\n**Explanation:**\nInitially, `s = \"3902\"`\n\nFirst operation:\n- `(3 + 9) % 10 = 2`\n- `(9 + 0) % 10 = 9`\n- `(0 + 2) % 10 = 2`\n\n`s` becomes \"292\"\n\nSecond operation:\n- `(2 + 9) % 10 = 1`\n- `(9 + 2) % 10 = 1`\n\n`s` becomes \"11\"\n\nSince the digits in \"11\" are the same, the output is `true`.\n\n### Function Template\n```python\ndef hasSameDigits(s):\n    # Write your logic here\n    pass\n```"
+            }
         ]
 }
+

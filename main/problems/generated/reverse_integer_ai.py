@@ -5,12 +5,11 @@ def reverse(x):
     
     while x != 0:
         digit = x % 10
-        x //= 10
         reversed_x = reversed_x * 10 + digit
+        x //= 10
     
     reversed_x *= sign
     
-    # Check for 32-bit signed integer overflow
     if reversed_x < -2**31 or reversed_x > 2**31 - 1:
         return 0
     

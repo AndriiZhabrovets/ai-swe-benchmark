@@ -67,7 +67,8 @@ hard_problems = [
     ["regex_match", "isMatch"],
     ["merge_k_lists", "mergeKLists"],
     ["first_missing_positive", "firstMissingPositive"],
-    ["trapping_rain_water", "trap"]
+    ["trapping_rain_water", "trap"],
+    ["check_if_equal", "hasSameDigits"]
 ]
 
 categories = {"easy_problems":easy_problems, "medium_problems":medium_problems, "hard_problems":hard_problems}
@@ -127,11 +128,17 @@ def call_problem_subprocess(problem_name, args):
         
         try:
             #logging.debug(f"Starting subprocess for problem: {problem_name[0]} with args: {args}")
-            result = subprocess.check_output([sys.executable, temp_file.name], stderr=subprocess.PIPE, text=True).strip()
+            result = subprocess.check_output([sys.executable, temp_file.name], stderr=subprocess.PIPE, text=True, timeout=20).strip()
             memory = tracemalloc.get_traced_memory()
             runtime = (time.time() - start_time) * 1000
             #logging.info(f"Subprocess completed for problem: {problem_name[0]} in {runtime} ms with memory {memory[0]} bytes")
             return json.loads(result), runtime, memory[0], None
+
+        except subprocess.TimeoutExpired:
+            runtime = (time.time() - start_time) * 1000
+            memory = tracemalloc.get_traced_memory()
+            return None, runtime, memory[0], "Process timed out and was terminated"
+
         except subprocess.CalledProcessError as e:
             #logging.error(f"Error in subprocess for problem: {problem_name[0]}. Error: {e.stderr.strip()}")
             runtime = (time.time() - start_time) * 1000
@@ -441,7 +448,7 @@ def main():
         summary_data["Average Memory Usage (bytes)"].append(model_avg_memory)
 
     summary_df = pd.DataFrame(summary_data)
-    export_data(summary_df, "general","Summary")
+    export_data(summary_df, "general","total-summary")
 
     
 

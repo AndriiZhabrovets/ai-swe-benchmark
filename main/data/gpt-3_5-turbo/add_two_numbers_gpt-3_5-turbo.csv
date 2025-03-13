@@ -1,36 +1,6 @@
 Test Case	Status	Run Time (ms)	Memory Usage (bytes)	Error Message
-0	Fail 🔴	57.32321739196777	3673	"Traceback (most recent call last):
-  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmpiq0m54dg"", line 8, in <module>
-    print(json.dumps(add_two_numbers_ai.addTwoNumbers(*[[2, 4, 3], [5, 6, 4]])))
-  File ""/Users/andreyzhabrovets/Developer/Python/ai-swe-benchmark/./main/problems/generated/add_two_numbers_ai.py"", line 12, in addTwoNumbers
-    x = l1.val if l1 else 0
-AttributeError: 'list' object has no attribute 'val'
-"
-1	Fail 🔴	51.68008804321289	3649	"Traceback (most recent call last):
-  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmpao1sfxup"", line 8, in <module>
-    print(json.dumps(add_two_numbers_ai.addTwoNumbers(*[[0], [0]])))
-  File ""/Users/andreyzhabrovets/Developer/Python/ai-swe-benchmark/./main/problems/generated/add_two_numbers_ai.py"", line 12, in addTwoNumbers
-    x = l1.val if l1 else 0
-AttributeError: 'list' object has no attribute 'val'
-"
-2	Fail 🔴	54.2140007019043	3670	"Traceback (most recent call last):
-  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmpb8n_fvss"", line 8, in <module>
-    print(json.dumps(add_two_numbers_ai.addTwoNumbers(*[[9, 9, 9, 9, 9, 9, 9], [9, 9, 9, 9]])))
-  File ""/Users/andreyzhabrovets/Developer/Python/ai-swe-benchmark/./main/problems/generated/add_two_numbers_ai.py"", line 12, in addTwoNumbers
-    x = l1.val if l1 else 0
-AttributeError: 'list' object has no attribute 'val'
-"
-3	Fail 🔴	51.560401916503906	3646	"Traceback (most recent call last):
-  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmpjbjs42vu"", line 8, in <module>
-    print(json.dumps(add_two_numbers_ai.addTwoNumbers(*[[0, 5, 8, 6], [1, 2, 1]])))
-  File ""/Users/andreyzhabrovets/Developer/Python/ai-swe-benchmark/./main/problems/generated/add_two_numbers_ai.py"", line 12, in addTwoNumbers
-    x = l1.val if l1 else 0
-AttributeError: 'list' object has no attribute 'val'
-"
-4	Fail 🔴	57.66010284423828	3685	"Traceback (most recent call last):
-  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmpcw467lzh"", line 8, in <module>
-    print(json.dumps(add_two_numbers_ai.addTwoNumbers(*[[9, 5, 3, 1], [5, 5, 5, 5]])))
-  File ""/Users/andreyzhabrovets/Developer/Python/ai-swe-benchmark/./main/problems/generated/add_two_numbers_ai.py"", line 12, in addTwoNumbers
-    x = l1.val if l1 else 0
-AttributeError: 'list' object has no attribute 'val'
-"
+0	Fail 🔴	5.363941192626953	2933	Process timed out and was terminated
+1	Fail 🔴	6.101846694946289	2933	Process timed out and was terminated
+2	Fail 🔴	5.060911178588867	2933	Process timed out and was terminated
+3	Fail 🔴	4.990816116333008	2933	Process timed out and was terminated
+4	Fail 🔴	5.00798225402832	2933	Process timed out and was terminated

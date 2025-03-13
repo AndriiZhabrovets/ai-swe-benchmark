@@ -1,6 +1,6 @@
 Test Case	Status	Run Time (ms)	Memory Usage (bytes)	Error Message
-0	Success 🟢	48.95806312561035	123	
-1	Success 🟢	48.59590530395508	123	
-2	Success 🟢	47.86825180053711	123	
-3	Success 🟢	53.150177001953125	123	
-4	Success 🟢	49.51786994934082	123	
+0	Fail 🔴	5.400896072387695	2933	Process timed out and was terminated
+1	Fail 🔴	5.241870880126953	2933	Process timed out and was terminated
+2	Fail 🔴	5.570173263549805	2933	Process timed out and was terminated
+3	Fail 🔴	4.938840866088867	2933	Process timed out and was terminated
+4	Fail 🔴	5.27501106262207	2933	Process timed out and was terminated
