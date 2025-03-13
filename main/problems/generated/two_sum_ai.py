@@ -1,8 +1,7 @@
 def twoSum(nums, target):
-    num_to_index = {}
-    
+    num_dict = {}
     for i, num in enumerate(nums):
         complement = target - num
-        if complement in num_to_index:
-            return [num_to_index[complement], i]
-        num_to_index[num] = i
+        if complement in num_dict:
+            return [num_dict[complement], i]
+        num_dict[num] = i

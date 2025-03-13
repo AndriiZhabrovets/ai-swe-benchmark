@@ -1,32 +1,28 @@
 def myAtoi(s):
-    # Define the 32-bit signed integer range
-    INT_MAX = 2**31 - 1
-    INT_MIN = -2**31
-    
-    # Initialize variables
-    index = 0
+    s = s.lstrip()  # Discard leading whitespace
+    if not s:
+        return 0
+
     sign = 1
-    total = 0
+    index = 0
     n = len(s)
 
-    # Discard leading whitespaces
-    while index < n and s[index] == ' ':
+    # Check for sign
+    if s[index] == '+':
+        index += 1
+    elif s[index] == '-':
+        sign = -1
         index += 1
 
-    # Check for optional sign
-    if index < n and (s[index] == '+' or s[index] == '-'):
-        sign = -1 if s[index] == '-' else 1
-        index += 1
-
-    # Convert digits to integer
+    result = 0
     while index < n and s[index].isdigit():
         digit = int(s[index])
         
-        # Check for overflow and clamp the value
-        if total > (INT_MAX - digit) // 10:
-            return INT_MAX if sign == 1 else INT_MIN
+        # Check for overflow and underflow
+        if result > (2**31 - 1) // 10 or (result == (2**31 - 1) // 10 and digit > 7):
+            return 2**31 - 1 if sign == 1 else -2**31
         
-        total = total * 10 + digit
+        result = result * 10 + digit
         index += 1
 
-    return sign * total
+    return sign * result

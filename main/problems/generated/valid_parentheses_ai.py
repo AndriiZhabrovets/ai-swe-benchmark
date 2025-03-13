@@ -6,9 +6,9 @@ def isValid(s):
         if char in mapping.values():
             stack.append(char)
         elif char in mapping.keys():
-            if stack == [] or mapping[char] != stack.pop():
+            if stack and stack[-1] == mapping[char]:
+                stack.pop()
+            else:
                 return False
-        else:
-            return False
-            
-    return stack == []
+                
+    return not stack

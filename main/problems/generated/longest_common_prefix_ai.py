@@ -2,15 +2,17 @@ def longestCommonPrefix(strs):
     if not strs:
         return ""
     
-    # Start with the first string as the prefix
+    # Initialize the prefix as the first string
     prefix = strs[0]
     
-    # Compare the prefix with each string in the array
     for string in strs[1:]:
-        # Reduce the prefix until it matches the start of the string
-        while not string.startswith(prefix):
-            prefix = prefix[:-1]  # Remove the last character of the prefix
-            if not prefix:  # If prefix becomes empty, return ""
-                return ""
-    
+        # Compare the current string with the prefix
+        while string[:len(prefix)] != prefix and prefix:
+            # Reduce the prefix by one character from the end
+            prefix = prefix[:-1]
+        
+        # If prefix becomes empty, no common prefix exists
+        if not prefix:
+            break
+            
     return prefix
