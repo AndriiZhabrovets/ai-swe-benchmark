@@ -12,6 +12,7 @@ from dotenv import load_dotenv
 import anthropic
 import google.generativeai as genai
 import matplotlib.pyplot as plt
+from mistralai import Mistal
 # Connecting the paths of all problems
 sys.path.insert(0, './main/problems/leetcode/easy')
 sys.path.insert(0, './main/problems/leetcode/medium')
@@ -32,9 +33,11 @@ load_dotenv(dotenv_path='./main/.env')
 openai_api_key = os.getenv("GPT_API_KEY")
 gemini_api_key = os.getenv("GEMINI_API_KEY")
 anth_api_key = os.getenv("CLAUDE_API_KEY")
+mistral_api_key = os.getenv("MISTRAL_API_KEY")
 genai.configure(api_key=gemini_api_key)
 client_open = openai.OpenAI(api_key=openai_api_key)
 client_anth = anthropic.Anthropic(api_key=anth_api_key)
+client_mistr = Mistal(api_key=mistral_api_key)
 
 
 
@@ -240,7 +243,7 @@ def average_measure(data):
 
 def export_data(data, name):
     file_name = f'main/data/{name}.xlsx'
-    data.to_excel(file_name)
+    data.to_csv(file_name, sep="\t")
     # print('DataFrame is written to Excel File successfully.')
 
 def visualize_results(summary_df):
@@ -330,7 +333,10 @@ def main():
 
         {"name": "claude-3-sonnet-20240229", "provider": "anthropic", "data_name": "claude-3"},
         {"name": "claude-3-5-haiku-20241022", "provider": "anthropic", "data_name": "claude-3-5"},
-        {"name": "gemini-1.5-flash", "provider": "gemini", "data_name": "gemini-1.5"}
+
+        {"name": "gemini-1.5-flash", "provider": "gemini", "data_name": "gemini-1.5"},
+        
+        {"name": "mistral-large-latest", "provider": "mistral", "data_name": "mistral-large"}
     ]
 
     for diff in categories:
