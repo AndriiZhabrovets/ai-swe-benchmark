@@ -1,6 +1,30 @@
 Test Case	Status	Run Time (ms)	Memory Usage (bytes)	Error Message
-0	Fail 🔴	6.244659423828125	2933	Process timed out and was terminated
-1	Fail 🔴	6.108999252319336	2933	Process timed out and was terminated
-2	Fail 🔴	12.069225311279297	2933	Process timed out and was terminated
-3	Fail 🔴	8.767127990722656	2933	Process timed out and was terminated
-4	Fail 🔴	6.124019622802734	2933	Process timed out and was terminated
+0	Fail 🔴	57.00111389160156	4781	"Traceback (most recent call last):
+  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmpipdomyrl"", line 8, in <module>
+    print(json.dumps(merge_two_lists_ai.mergeTwoLists(*[[1, 2, 4], [1, 3, 4]])))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/Users/andreyzhabrovets/Developer/Python/ai-swe-benchmark/main/problems/generated/merge_two_lists_ai.py"", line 11, in mergeTwoLists
+    if list1.val < list2.val:
+       ^^^^^^^^^
+AttributeError: 'list' object has no attribute 'val'
+"
+1	Fail 🔴	29.705047607421875	339	Incorrect output: None
+2	Success 🟢	27.137041091918945	338	
+3	Fail 🔴	34.84177589416504	4793	"Traceback (most recent call last):
+  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmpbv93mszc"", line 8, in <module>
+    print(json.dumps(merge_two_lists_ai.mergeTwoLists(*[[10, 13, 22], [2, 4, 6]])))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/Users/andreyzhabrovets/Developer/Python/ai-swe-benchmark/main/problems/generated/merge_two_lists_ai.py"", line 11, in mergeTwoLists
+    if list1.val < list2.val:
+       ^^^^^^^^^
+AttributeError: 'list' object has no attribute 'val'
+"
+4	Fail 🔴	33.143043518066406	4749	"Traceback (most recent call last):
+  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmp7tjnnbjc"", line 8, in <module>
+    print(json.dumps(merge_two_lists_ai.mergeTwoLists(*[[7, 15], [9]])))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File ""/Users/andreyzhabrovets/Developer/Python/ai-swe-benchmark/main/problems/generated/merge_two_lists_ai.py"", line 11, in mergeTwoLists
+    if list1.val < list2.val:
+       ^^^^^^^^^
+AttributeError: 'list' object has no attribute 'val'
+"

@@ -9,21 +9,22 @@ def mergeKLists(lists):
     min_heap = []
     
     # Initialize the heap with the head of each list
-    for i, l in enumerate(lists):
+    for index, l in enumerate(lists):
         if l:
-            heapq.heappush(min_heap, (l.val, i, l))
+            heapq.heappush(min_heap, (l.val, index, l))
     
-    dummy = ListNode(0)
-    current = dummy
+    # Dummy head for the result list
+    head = ListNode(0)
+    current = head
     
     while min_heap:
         # Get the smallest node from the heap
         val, index, node = heapq.heappop(min_heap)
-        current.next = node
-        current = current.next
+        current.next = ListNode(val)  # Add the smallest node to the result
+        current = current.next  # Move to the next position
         
-        # If there is a next node in the list, add it to the heap
+        # If there's a next node in the list, add it to the heap
         if node.next:
             heapq.heappush(min_heap, (node.next.val, index, node.next))
     
-    return dummy.next
+    return head.next

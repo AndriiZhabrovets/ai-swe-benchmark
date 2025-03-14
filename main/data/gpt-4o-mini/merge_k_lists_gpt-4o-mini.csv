@@ -1,6 +1,30 @@
 Test Case	Status	Run Time (ms)	Memory Usage (bytes)	Error Message
-0	Fail 🔴	5.837917327880859	2933	Process timed out and was terminated
-1	Fail 🔴	5.527973175048828	2933	Process timed out and was terminated
-2	Fail 🔴	5.4531097412109375	2933	Process timed out and was terminated
-3	Fail 🔴	5.455255508422852	2933	Process timed out and was terminated
-4	Fail 🔴	5.306243896484375	2933	Process timed out and was terminated
+0	Fail 🔴	50.128936767578125	4871	"Traceback (most recent call last):
+  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmpfb5m9mfb"", line 8, in <module>
+    print(json.dumps(merge_k_lists_ai.mergeKLists(*[[[1, 4, 5], [1, 3, 4], [2, 6]]])))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/Users/andreyzhabrovets/Developer/Python/ai-swe-benchmark/main/problems/generated/merge_k_lists_ai.py"", line 14, in mergeKLists
+    heapq.heappush(min_heap, (l.val, index, l))
+                              ^^^^^
+AttributeError: 'list' object has no attribute 'val'
+"
+1	Fail 🔴	21.55017852783203	339	Incorrect output: None
+2	Fail 🔴	18.999099731445312	339	Incorrect output: None
+3	Fail 🔴	22.033214569091797	4851	"Traceback (most recent call last):
+  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmp554n7psw"", line 8, in <module>
+    print(json.dumps(merge_k_lists_ai.mergeKLists(*[[[10, 13, 22], [2, 4, 6]]])))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/Users/andreyzhabrovets/Developer/Python/ai-swe-benchmark/main/problems/generated/merge_k_lists_ai.py"", line 14, in mergeKLists
+    heapq.heappush(min_heap, (l.val, index, l))
+                              ^^^^^
+AttributeError: 'list' object has no attribute 'val'
+"
+4	Fail 🔴	22.099971771240234	4807	"Traceback (most recent call last):
+  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmp1w3phcuk"", line 8, in <module>
+    print(json.dumps(merge_k_lists_ai.mergeKLists(*[[[7, 15], [9]]])))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File ""/Users/andreyzhabrovets/Developer/Python/ai-swe-benchmark/main/problems/generated/merge_k_lists_ai.py"", line 14, in mergeKLists
+    heapq.heappush(min_heap, (l.val, index, l))
+                              ^^^^^
+AttributeError: 'list' object has no attribute 'val'
+"

@@ -11,7 +11,6 @@ import openai
 from dotenv import load_dotenv
 import anthropic
 import google.generativeai as genai
-import matplotlib.pyplot as plt
 from mistralai import Mistral
 # Connecting the paths of all problems
 sys.path.insert(0, './main/problems/leetcode/easy')
@@ -22,11 +21,11 @@ sys.path.insert(0, './main/problems/leetcode/hard')
 sys.path.insert(0, './main/problems/generated')
 
 
-#logging.basicConfig(
-#    filename='./main/logs/benchmark.log',
-#    level=logging.INFO,
-#    format='%(asctime)s - %(levelname)s - %(message)s'
-#)
+logging.basicConfig(
+   filename='./main/logs/benchmark.log',
+   level=logging.INFO,
+   format='%(asctime)s - %(levelname)s - %(message)s'
+)
 
 
 load_dotenv(dotenv_path='./main/.env')
@@ -53,7 +52,8 @@ easy_problems = [
     ["roman_to_int", "romanToInt"],
     ["longest_common_prefix", "longestCommonPrefix"],
     ["valid_parentheses", "isValid"],
-    ["merge_two_lists", "mergeTwoLists"]
+    ["merge_two_lists", "mergeTwoLists"],
+    ["simple_calculator", "calculator"],
 ]
 medium_problems = [
     ["add_two_numbers", "addTwoNumbers"],
@@ -101,7 +101,7 @@ def create_summary(st, dataset, total_success_count):
         else:
             dataset["Error Message"].append(None)
 
-        #logging.info(f"Test Case {i}: Status: {solved}, Run Time: {tm} ms, Memory Usage: {tcase.memory} mb, Error: {msg}")
+        logging.info(f"Test Case {i}: Status: {solved}, Run Time: {tm} ms, Memory Usage: {tcase.memory} mb, Error: {msg}")
         # print(f"\nTest Case {i}:")
         # print(f"Solution Status: {solved}")
         # print(f"Run Time: {round(tm, 3)} milliseconds")
@@ -127,11 +127,11 @@ def call_problem_subprocess(problem_name, args):
         tracemalloc.start()
         
         try:
-            #logging.debug(f"Starting subprocess for problem: {problem_name[0]} with args: {args}")
-            result = subprocess.check_output([sys.executable, temp_file.name], stderr=subprocess.PIPE, text=True, timeout=20).strip()
+            logging.debug(f"Starting subprocess for problem: {problem_name[0]} with args: {args}")
+            result = subprocess.check_output([sys.executable, temp_file.name], stderr=subprocess.PIPE, text=True, timeout=2).strip()
             memory = tracemalloc.get_traced_memory()
             runtime = (time.time() - start_time) * 1000
-            #logging.info(f"Subprocess completed for problem: {problem_name[0]} in {runtime} ms with memory {memory[0]} bytes")
+            logging.info(f"Subprocess completed for problem: {problem_name[0]} in {runtime} ms with memory {memory[0]} bytes")
             return json.loads(result), runtime, memory[0], None
 
         except subprocess.TimeoutExpired:
@@ -140,14 +140,14 @@ def call_problem_subprocess(problem_name, args):
             return None, runtime, memory[0], "Process timed out and was terminated"
 
         except subprocess.CalledProcessError as e:
-            #logging.error(f"Error in subprocess for problem: {problem_name[0]}. Error: {e.stderr.strip()}")
+            logging.error(f"Error in subprocess for problem: {problem_name[0]}. Error: {e.stderr.strip()}")
             runtime = (time.time() - start_time) * 1000
             memory = tracemalloc.get_traced_memory()
             return None, runtime, memory[0], e.stderr
         finally:
             tracemalloc.stop()
             os.unlink(temp_file.name)
-            #logging.debug(f"Temporary file deleted for problem: {problem_name[0]}")
+            logging.debug(f"Temporary file deleted for problem: {problem_name[0]}")
 
 def clean_code(solution_code):
     """Remove markdown formatting from the AI-generated code."""
@@ -218,17 +218,17 @@ def generate_ai_solution(problem_name, prompts, model, provider):
         solution_code = clean_code(solution_code)
 
 
-        #logging.info(f"Generated AI solution for problem: {problem_name}")
+        logging.info(f"Generated AI solution for problem: {problem_name}")
         return solution_code 
     
     except Exception as e:
-        #logging.error(f"Error generating AI solution for problem {problem_name}: {str(e)}")
+        logging.error(f"Error generating AI solution for problem {problem_name}: {str(e)}")
         return None
 
 def solution_check(problem_name, cases_data, prompts=None, use_ai=False, success_count=0, model=None, provider=None):
     results = []
     test_cases = cases_data[problem_name[0]]
-    #logging.info(f"Checking solution for problem: {problem_name[0]} with {len(test_cases)} test cases.")
+    logging.info(f"Checking solution for problem: {problem_name[0]} with {len(test_cases)} test cases.")
 
     if use_ai:
         name = f"{problem_name[0]}_ai" 
@@ -241,14 +241,14 @@ def solution_check(problem_name, cases_data, prompts=None, use_ai=False, success
         sol, runtime, memory, error = call_problem_subprocess(problem_name, tcase["input"])
         if error:
             results.append(TestCase(False, error, runtime, memory))
-            #logging.warning(f"Test case failed with error: {error.strip()}")
+            logging.warning(f"Test case failed with error: {error.strip()}")
         elif sol in tcase["expected_output"]:
             results.append(TestCase(True, None, runtime, memory))
-            #logging.info(f"Test case passed. Output: {sol}")
+            logging.info(f"Test case passed. Output: {sol}")
             success_count += 1
         else:
             results.append(TestCase(False, f"Incorrect output: {sol}", runtime, memory))
-            #logging.warning(f"Test case failed. Expected: {tcase['expected_output']}, Got: {sol}")
+            logging.warning(f"Test case failed. Expected: {tcase['expected_output']}, Got: {sol}")
     return results, success_count
 
 def average_measure(data):
@@ -301,7 +301,7 @@ def struct_init(models):
 def main():
     os.system("clear")
 
-    #logging.info("Benchmarking process started.")
+    logging.info("Benchmarking process started.")
     total_dataset = {
         'Problem': [],
         'Status': [],
@@ -311,31 +311,33 @@ def main():
     }
     test_cases = load_test_cases('main/data/test_cases.json')
     prompts = load_test_cases('main/data/prompts.json')
-    #logging.info("Loaded test cases.")
+    logging.info("Loaded test cases.")
     total_success_count = 0
 
-    models = [
-        {"name": "gpt-3.5-turbo", "provider": "openai", "data_name": "gpt-3.5"},
-        {"name": "gpt-4o-mini", "provider": "openai", "data_name": "gpt-4o-mini"},
-        {"name": "o3-mini", "provider": "openai", "data_name": "o3-mini"},
-        
-        {"name": "claude-3-haiku-20240307", "provider": "anthropic", "data_name": "claude-3"},
-        {"name": "claude-3-5-sonnet-20241022", "provider": "anthropic", "data_name": "claude-3-5"},
-        {"name": "claude-3-7-sonnet-20250219", "provider": "anthropic", "data_name": "claude-3-7"},
+    models = [     
+     #{"name": "claude-3-haiku-20240307", "provider": "anthropic", "data_name": "claude-3"},
+       {"name": "claude-3-5-sonnet-20241022", "provider": "anthropic", "data_name": "claude-3-5"},
+       {"name": "claude-3-7-sonnet-20250219", "provider": "anthropic", "data_name": "claude-3-7"},
 
-        {"name": "gemini-1.5-flash", "provider": "gemini", "data_name": "gemini-1.5"},
+       {"name": "gemini-1.5-flash", "provider": "gemini", "data_name": "gemini-1.5"},
         
-        {"name": "mistral-large-latest", "provider": "mistral", "data_name": "mistral-large"},
-        {"name": "open-mistral-nemo", "provider": "mistral", "data_name": "mistral-nemo"},
-        {"name": "codestral-latest", "provider": "mistral", "data_name": "codestral-latest"}
+       #{"name": "mistral-large-latest", "provider": "mistral", "data_name": "mistral-large"},
+       {"name": "open-mistral-nemo", "provider": "mistral", "data_name": "mistral-nemo"},
+       {"name": "codestral-latest", "provider": "mistral", "data_name": "codestral-latest"},
+
+
+        {"name": "o3-mini", "provider": "openai", "data_name": "o3-mini"},
+       # {"name": "gpt-3.5-turbo", "provider": "openai", "data_name": "gpt-3.5"},
+        {"name": "gpt-4o-mini", "provider": "openai", "data_name": "gpt-4o-mini"}
+ 
     ]
 
     struct_init(models)
 
     for diff in categories:
-        #logging.info(f"Processing category: {diff.replace('_',' ').capitalize()}")
+        logging.info(f"Processing category: {diff.replace('_',' ').capitalize()}")
         for l in range(len(categories[diff])):
-            #logging.info(f"Processing problem: {categories[diff][l][1]}")
+            logging.info(f"Processing problem: {categories[diff][l][1]}")
             success_count = 0
             
             dataset = {
@@ -374,7 +376,7 @@ def main():
             # print("\n")
 
             # Test AI-generated solution
-            #logging.info(f"Processing AI-generated solution for problem: {categories[diff][l][1]}")
+            logging.info(f"Processing AI-generated solution for problem: {categories[diff][l][1]}")
 
             for model in models:
                 ai_dataset = {
@@ -411,7 +413,7 @@ def main():
    
     total_data = pd.DataFrame(total_dataset)
     export_data(total_data, 'general', 'TotalData')
-    #logging.info("Benchmarking process completed. Summary exported.")
+    logging.info("Benchmarking process completed. Summary exported.")
     # print(total_data)
     # print("\n") 
     
@@ -453,5 +455,6 @@ def main():
     
 
     avg_time_memory_df = compute_avg_times_memory(total_dataset, models, categories)
+    export_data(avg_time_memory_df, "general","total-summary")
 if __name__ == "__main__":
     main()

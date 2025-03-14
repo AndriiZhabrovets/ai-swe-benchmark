@@ -1,6 +1,46 @@
 Test Case	Status	Run Time (ms)	Memory Usage (bytes)	Error Message
-0	Fail 🔴	5.363941192626953	2933	Process timed out and was terminated
-1	Fail 🔴	6.101846694946289	2933	Process timed out and was terminated
-2	Fail 🔴	5.060911178588867	2933	Process timed out and was terminated
-3	Fail 🔴	4.990816116333008	2933	Process timed out and was terminated
-4	Fail 🔴	5.00798225402832	2933	Process timed out and was terminated
+0	Fail 🔴	53.191184997558594	4773	"Traceback (most recent call last):
+  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmprmfkmra9"", line 8, in <module>
+    print(json.dumps(add_two_numbers_ai.addTwoNumbers(*[[2, 4, 3], [5, 6, 4]])))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/Users/andreyzhabrovets/Developer/Python/ai-swe-benchmark/main/problems/generated/add_two_numbers_ai.py"", line 2, in addTwoNumbers
+    dummy_head = ListNode(0)
+                 ^^^^^^^^
+NameError: name 'ListNode' is not defined
+"
+1	Fail 🔴	33.735036849975586	4725	"Traceback (most recent call last):
+  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmp3sbhkrwl"", line 8, in <module>
+    print(json.dumps(add_two_numbers_ai.addTwoNumbers(*[[0], [0]])))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File ""/Users/andreyzhabrovets/Developer/Python/ai-swe-benchmark/main/problems/generated/add_two_numbers_ai.py"", line 2, in addTwoNumbers
+    dummy_head = ListNode(0)
+                 ^^^^^^^^
+NameError: name 'ListNode' is not defined
+"
+2	Fail 🔴	31.545162200927734	4833	"Traceback (most recent call last):
+  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmpojybup4o"", line 8, in <module>
+    print(json.dumps(add_two_numbers_ai.addTwoNumbers(*[[9, 9, 9, 9, 9, 9, 9], [9, 9, 9, 9]])))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/Users/andreyzhabrovets/Developer/Python/ai-swe-benchmark/main/problems/generated/add_two_numbers_ai.py"", line 2, in addTwoNumbers
+    dummy_head = ListNode(0)
+                 ^^^^^^^^
+NameError: name 'ListNode' is not defined
+"
+3	Fail 🔴	30.425071716308594	4785	"Traceback (most recent call last):
+  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmpzt4wbxeq"", line 8, in <module>
+    print(json.dumps(add_two_numbers_ai.addTwoNumbers(*[[0, 5, 8, 6], [1, 2, 1]])))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/Users/andreyzhabrovets/Developer/Python/ai-swe-benchmark/main/problems/generated/add_two_numbers_ai.py"", line 2, in addTwoNumbers
+    dummy_head = ListNode(0)
+                 ^^^^^^^^
+NameError: name 'ListNode' is not defined
+"
+4	Fail 🔴	31.81624412536621	4821	"Traceback (most recent call last):
+  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmpt5_3oenx"", line 8, in <module>
+    print(json.dumps(add_two_numbers_ai.addTwoNumbers(*[[9, 5, 3, 1], [5, 5, 5, 5]])))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/Users/andreyzhabrovets/Developer/Python/ai-swe-benchmark/main/problems/generated/add_two_numbers_ai.py"", line 2, in addTwoNumbers
+    dummy_head = ListNode(0)
+                 ^^^^^^^^
+NameError: name 'ListNode' is not defined
+"
