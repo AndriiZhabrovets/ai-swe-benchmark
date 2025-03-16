@@ -1,46 +1,46 @@
 Test Case	Status	Run Time (ms)	Memory Usage (bytes)	Error Message
-0	Fail 🔴	52.580833435058594	4809	"Traceback (most recent call last):
-  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmpkl_8k3d_"", line 8, in <module>
+0	Fail 🔴	47.40023612976074	4791	"Traceback (most recent call last):
+  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmp7h8f7b98"", line 8, in <module>
     print(json.dumps(add_two_numbers_ai.addTwoNumbers(*[[2, 4, 3], [5, 6, 4]])))
                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
   File ""/Users/andreyzhabrovets/Developer/Python/ai-swe-benchmark/main/problems/generated/add_two_numbers_ai.py"", line 14, in addTwoNumbers
-    val1 = l1.val if l1 is not None else 0
-           ^^^^^^
+    val1 = (l1.val if l1 else 0)
+            ^^^^^^
 AttributeError: 'list' object has no attribute 'val'
 "
-1	Fail 🔴	34.16180610656738	4761	"Traceback (most recent call last):
-  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmpwm68lc7o"", line 8, in <module>
+1	Fail 🔴	30.93123435974121	4684	"Traceback (most recent call last):
+  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmpg9pzagdv"", line 8, in <module>
     print(json.dumps(add_two_numbers_ai.addTwoNumbers(*[[0], [0]])))
                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
   File ""/Users/andreyzhabrovets/Developer/Python/ai-swe-benchmark/main/problems/generated/add_two_numbers_ai.py"", line 14, in addTwoNumbers
-    val1 = l1.val if l1 is not None else 0
-           ^^^^^^
+    val1 = (l1.val if l1 else 0)
+            ^^^^^^
 AttributeError: 'list' object has no attribute 'val'
 "
-2	Fail 🔴	32.49001502990723	4869	"Traceback (most recent call last):
-  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmpzoy47d_a"", line 8, in <module>
+2	Fail 🔴	28.329133987426758	4792	"Traceback (most recent call last):
+  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmpw59djudd"", line 8, in <module>
     print(json.dumps(add_two_numbers_ai.addTwoNumbers(*[[9, 9, 9, 9, 9, 9, 9], [9, 9, 9, 9]])))
                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File ""/Users/andreyzhabrovets/Developer/Python/ai-swe-benchmark/main/problems/generated/add_two_numbers_ai.py"", line 14, in addTwoNumbers
-    val1 = l1.val if l1 is not None else 0
-           ^^^^^^
+    val1 = (l1.val if l1 else 0)
+            ^^^^^^
 AttributeError: 'list' object has no attribute 'val'
 "
-3	Fail 🔴	30.88998794555664	4821	"Traceback (most recent call last):
-  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmpkizbcfr1"", line 8, in <module>
+3	Fail 🔴	25.603055953979492	4744	"Traceback (most recent call last):
+  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmpfap1rq98"", line 8, in <module>
     print(json.dumps(add_two_numbers_ai.addTwoNumbers(*[[0, 5, 8, 6], [1, 2, 1]])))
                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File ""/Users/andreyzhabrovets/Developer/Python/ai-swe-benchmark/main/problems/generated/add_two_numbers_ai.py"", line 14, in addTwoNumbers
-    val1 = l1.val if l1 is not None else 0
-           ^^^^^^
+    val1 = (l1.val if l1 else 0)
+            ^^^^^^
 AttributeError: 'list' object has no attribute 'val'
 "
-4	Fail 🔴	30.93695640563965	4833	"Traceback (most recent call last):
-  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmp82wna5fr"", line 8, in <module>
+4	Fail 🔴	25.099992752075195	4815	"Traceback (most recent call last):
+  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmppfjhipax"", line 8, in <module>
     print(json.dumps(add_two_numbers_ai.addTwoNumbers(*[[9, 5, 3, 1], [5, 5, 5, 5]])))
                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File ""/Users/andreyzhabrovets/Developer/Python/ai-swe-benchmark/main/problems/generated/add_two_numbers_ai.py"", line 14, in addTwoNumbers
-    val1 = l1.val if l1 is not None else 0
-           ^^^^^^
+    val1 = (l1.val if l1 else 0)
+            ^^^^^^
 AttributeError: 'list' object has no attribute 'val'
 "

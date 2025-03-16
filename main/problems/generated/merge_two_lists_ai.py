@@ -4,22 +4,22 @@ class ListNode:
         self.next = next
 
 def mergeTwoLists(list1, list2):
-    dummy = ListNode()  # Create a dummy node to simplify the merging process
-    current = dummy  # This pointer will be used to build the new list
+    dummy = ListNode(0)  # Create a dummy node to simplify the merging process
+    current = dummy  # This will be used to build the new list
 
     while list1 and list2:
         if list1.val < list2.val:
-            current.next = list1  # Link current node to list1 node
+            current.next = list1  # Link the smaller node to the merged list
             list1 = list1.next  # Move to the next node in list1
         else:
-            current.next = list2  # Link current node to list2 node
+            current.next = list2  # Link the smaller node to the merged list
             list2 = list2.next  # Move to the next node in list2
-        current = current.next  # Move the current pointer to the next node
+        current = current.next  # Move the current pointer
 
-    # At this point, at least one of the lists is exhausted. Link the remaining nodes.
+    # If there are remaining nodes in either list, link them
     if list1:
         current.next = list1
     elif list2:
         current.next = list2
 
-    return dummy.next  # Return the merged list starting from the next of dummy
+    return dummy.next  # Return the merged list, which starts from the next of dummy

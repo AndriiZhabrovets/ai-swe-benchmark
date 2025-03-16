@@ -54,6 +54,7 @@ easy_problems = [
     ["valid_parentheses", "isValid"],
     ["merge_two_lists", "mergeTwoLists"],
     ["simple_calculator", "calculator"],
+    ["add_binary", "addBinary"]
 ]
 medium_problems = [
     ["add_two_numbers", "addTwoNumbers"],

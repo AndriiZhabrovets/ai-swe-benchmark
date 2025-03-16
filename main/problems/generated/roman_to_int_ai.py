@@ -1,5 +1,5 @@
 def romanToInt(s):
-    roman_map = {
+    roman_values = {
         'I': 1,
         'V': 5,
         'X': 10,
@@ -13,11 +13,11 @@ def romanToInt(s):
     prev_value = 0
     
     for char in reversed(s):
-        current_value = roman_map[char]
-        if current_value < prev_value:
-            total -= current_value
+        value = roman_values[char]
+        if value < prev_value:
+            total -= value
         else:
-            total += current_value
-        prev_value = current_value
-    
+            total += value
+        prev_value = value
+        
     return total

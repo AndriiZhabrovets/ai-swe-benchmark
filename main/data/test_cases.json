@@ -162,6 +162,29 @@
         }
     ],
 
+    "add_binary": [
+        {
+            "input": ["11", "1"],
+            "expected_output": ["100"]
+        },
+        {
+            "input": ["1010", "1011"],
+            "expected_output": ["10101"]
+        },
+        {
+            "input": ["1111", "1111"],
+            "expected_output": ["11110"]
+        },
+        {
+            "input": ["100", "110010"],
+            "expected_output": ["110110"]
+        },
+        {
+            "input": ["0", "0"],
+            "expected_output": ["0"]
+        }
+    ],
+
     "add_two_numbers" : [
         {
             "input": [[2, 4, 3], [5, 6, 4]],

@@ -1,6 +1,6 @@
 Test Case	Status	Run Time (ms)	Memory Usage (bytes)	Error Message
-0	Success 🟢	34.538984298706055	341	
-1	Success 🟢	21.139860153198242	341	
-2	Success 🟢	19.14501190185547	341	
-3	Success 🟢	17.371177673339844	341	
-4	Fail 🔴	17.2727108001709	339	Incorrect output: None
+0	Success 🟢	43.8389778137207	341	
+1	Success 🟢	22.97687530517578	341	
+2	Success 🟢	19.54817771911621	341	
+3	Success 🟢	18.742799758911133	341	
+4	Fail 🔴	17.297744750976562	339	Incorrect output: None

@@ -1,6 +1,6 @@
 Test Case	Status	Run Time (ms)	Memory Usage (bytes)	Error Message
-0	Fail 🔴	50.128936767578125	4871	"Traceback (most recent call last):
-  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmpfb5m9mfb"", line 8, in <module>
+0	Fail 🔴	46.801090240478516	4871	"Traceback (most recent call last):
+  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmpi6eedzn0"", line 8, in <module>
     print(json.dumps(merge_k_lists_ai.mergeKLists(*[[[1, 4, 5], [1, 3, 4], [2, 6]]])))
                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File ""/Users/andreyzhabrovets/Developer/Python/ai-swe-benchmark/main/problems/generated/merge_k_lists_ai.py"", line 14, in mergeKLists
@@ -8,10 +8,10 @@ Test Case	Status	Run Time (ms)	Memory Usage (bytes)	Error Message
                               ^^^^^
 AttributeError: 'list' object has no attribute 'val'
 "
-1	Fail 🔴	21.55017852783203	339	Incorrect output: None
-2	Fail 🔴	18.999099731445312	339	Incorrect output: None
-3	Fail 🔴	22.033214569091797	4851	"Traceback (most recent call last):
-  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmp554n7psw"", line 8, in <module>
+1	Fail 🔴	22.684812545776367	339	Incorrect output: None
+2	Fail 🔴	20.741939544677734	339	Incorrect output: None
+3	Fail 🔴	23.82206916809082	4851	"Traceback (most recent call last):
+  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmp48o5_wxl"", line 8, in <module>
     print(json.dumps(merge_k_lists_ai.mergeKLists(*[[[10, 13, 22], [2, 4, 6]]])))
                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File ""/Users/andreyzhabrovets/Developer/Python/ai-swe-benchmark/main/problems/generated/merge_k_lists_ai.py"", line 14, in mergeKLists
@@ -19,8 +19,8 @@ AttributeError: 'list' object has no attribute 'val'
                               ^^^^^
 AttributeError: 'list' object has no attribute 'val'
 "
-4	Fail 🔴	22.099971771240234	4807	"Traceback (most recent call last):
-  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmp1w3phcuk"", line 8, in <module>
+4	Fail 🔴	23.488998413085938	4807	"Traceback (most recent call last):
+  File ""/var/folders/6k/7ddpkzxs6qz688ygspzk_f240000gn/T/tmp0izquy6e"", line 8, in <module>
     print(json.dumps(merge_k_lists_ai.mergeKLists(*[[[7, 15], [9]]])))
                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
   File ""/Users/andreyzhabrovets/Developer/Python/ai-swe-benchmark/main/problems/generated/merge_k_lists_ai.py"", line 14, in mergeKLists

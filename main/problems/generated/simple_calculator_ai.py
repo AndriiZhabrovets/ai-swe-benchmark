@@ -9,6 +9,6 @@ def calculator(a, b, operator):
         if b != 0:
             return a / b
         else:
-            return 'undefined'  # To handle division by zero
+            return 'undefined'  # Handle division by zero
     else:
         return 'unknown value'

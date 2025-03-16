@@ -1,12 +1,11 @@
 def isValid(s):
     stack = []
-    bracket_map = {')': '(', '}': '{', ']': '['}
+    mapping = {')': '(', '}': '{', ']': '['}
     
     for char in s:
-        if char in bracket_map.values():
+        if char in mapping.values():
             stack.append(char)
-        elif char in bracket_map.keys():
-            if stack == [] or bracket_map[char] != stack.pop():
+        elif char in mapping.keys():
+            if stack == [] or mapping[char] != stack.pop():
                 return False
-    
     return stack == []
